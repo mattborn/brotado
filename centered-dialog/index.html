@@ -1,0 +1,33 @@
+<!doctype html>
+<html class="modal-open">
+<head>
+	<meta charset="utf-8">
+	<title>Centered Dialog</title>
+	<link rel="stylesheet" href="confirm.css">
+</head>
+<body>
+	<div class="overlay">
+		<div class="dialog">
+			<div class="modal-body">
+				<h1 class="confirm-title">Remove Group</h1>
+				<ul class="confirm-items">
+					<li class="confirm-item"><b>Sprout Social</b> will be removed from the group <b>Sprout Social Team</b></li>
+					<li class="confirm-item">We'll go ahead and delete the group <b>Sprout Social Team</b> since there are no longer any profiles in it.</li>
+				</ul>
+			</div>
+			<div class="dialog-actions">
+				<a class="secondary-link">Cancel</a>
+				<a class="primary-button">Submit</a>
+			</div>
+		</div>
+	</div>
+	<div class="demo">
+		<a data-target="remove-group">
+			<b>Remove Group</b>
+			<span>Something happens...</span>
+		</a>
+	</div>
+	<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="confirm.js"></script>
+</body>
+</html>

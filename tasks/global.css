@@ -1,0 +1,120 @@
+
+/*  Level  */
+
+body,
+div { box-sizing: border-box; }
+
+body,
+h1,
+h2,
+h3,
+input,
+p { margin: 0; padding: 0; }
+
+h1,
+h2,
+h3 { line-height: 1; margin: 0; }
+
+a { color: #1D67A7; text-decoration: none; } /* #7AC143 */
+
+img { max-width: 100%; vertical-align: bottom; }
+
+input { color: inherit; font: inherit; }
+
+table { width: 100%; border-collapse: collapse; border-spacing: 0; }
+
+/*  Proxima  */
+
+html {
+	font: 600 100%/1 'Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
+	font-smoothing: antialiased;
+}
+
+table th,
+.pill-drop,
+.pill-tabs { font-weight: bold; text-transform: uppercase; }
+.pill-drop { font-size: 14px; }
+
+table th,
+.pill-tabs { font-size: 12px; letter-spacing: 1px; }
+
+.subtle { font-size: 12px; }
+
+/*  Theme  */
+
+html {
+	height: 100%;
+	background: #eee;
+	color: #555;
+
+}
+
+body { min-height: 100%; padding: 120px 20px 80px; }
+
+/*  Position  */
+
+.align:after,
+.group:after { height: 0; clear: both; content: '\0020'; display: block; }
+
+.left { float: left; }
+.right { float: right; }
+
+.align { width: 1140px; margin: 0 auto; }
+
+/*  Header  */
+
+#header-stub {
+	width: 100%; height: 90px;
+	background: #333;
+	position: fixed;
+	top: 0; left: 0;
+}
+
+
+/*  Content  */
+
+#main { width: 860px; float: left; }
+#side { width: 250px; float: right; }
+
+/*  Footer  */
+
+/*  Reports  */
+
+.pillow {
+	background: #fff url(images/pillow.png) repeat-x bottom;
+	border-radius: 5px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	margin: 0 0 20px;
+	padding: 20px;
+}
+
+.report-header { margin-bottom: 20px; }
+.report-header-title {
+	float: left;
+	font-size: 28px;
+	margin-right: 20px;
+}
+.report-date {
+	width: 220px;
+	border: 1px solid #ccc;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	color: #777;
+	font-size: 14px;
+	font-weight: normal;
+	letter-spacing: 1px;
+	padding: 5px 5px 3px;
+	text-align: center;
+}
+
+.small-title {
+	color: #bbb;
+	font-size: 13px;
+	letter-spacing: 1px;
+	line-height: 20px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+
+/*  Hacks  */
+
+#team-report { visibility: hidden; }

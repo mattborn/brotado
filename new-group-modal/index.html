@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en" class="modal-open">
+<head>
+	<meta charset="utf-8">
+	<title>New Group</title>
+	<link rel="stylesheet" href="new-group.css">
+</head>
+<body>
+	<div class="overlay">
+		<div class="modal new-group">
+			<div class="modal-header">
+				<h1 class="heading">Create a New Group</h1>
+			</div>
+			<div class="modal-body">
+				<div class="new-group-top">
+					<p class="error error-1">Please enter a group name.</p>
+					<p class="error error-2">Sorry, that group already exists. Try another name.</p>
+					<div class="new-group-input">
+						<input class="new-group-name" placeholder="Name of Group">
+						<p class="new-group-caption">e.g. Midwest Region or Chicago Accounts</p>
+					</div>
+					<p class="new-group-info">Groups help you organize your social profiles and team members. Name your group and you can begin connecting social profiles. Each group must contain at least one Twitter or Facebook account.</p>
+				</div>
+				<div class="new-group-method selected">
+					<input type="radio" class="radio" name="new-group-from" id="new-group-connect" checked>	
+					<label class="heading new-group-label" for="new-group-connect">From New Profile</label>
+					<div class="toggle">
+						<a class="connect-twitter-button new-group-button selected">
+							<i class="button-icon twitter-icon"></i>
+							<span class="button-text">Twitter Profile</span>
+						</a>
+						<a class="connect-facebook-button new-group-button">
+							<i class="button-icon facebook-icon"></i>
+							<span class="button-text">Facebook Page</span>
+						</a>
+						<img class="new-group-img twitter" alt="Twitter Image" src="">
+						<img class="new-group-img facebook" alt="Facebook Image" src="">
+					</div>
+				</div>
+				<div class="new-group-method">
+					<input type="radio" class="radio" name="new-group-from" id="new-group-existing">
+					<label class="heading new-group-label" for="new-group-existing">From an Existing Profile</label>
+					<div class="toggle">
+						<p class="error error-3">Group must contain at least one Twitter or Facebook account.</p>
+						<ul class="profile-stubs">
+							<li class="profile-stub"></li>
+							<li class="profile-stub"></li>
+							<li class="profile-stub"></li>
+							<li class="profile-stub"></li>
+							<li class="profile-stub"></li>
+							<li class="profile-stub"></li>
+							<li class="profile-stub"></li>
+							<li class="profile-stub"></li>
+							<li class="profile-stub"></li>
+							<li class="profile-stub"></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="modal-actions">
+					<a class="secondary-link">Cancel</a>
+					<a class="primary-button">Proceed</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<ul class="demo">
+		<li><a data-target="error-1">Error 1</a> Empty group name</li>
+		<li><a data-target="error-2">Error 2</a> Group exists</li>
+		<li><a data-target="error-3">Error 3</a> Existing bad click</li>
+	</ul>
+	<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="new-group.js"></script>
+</body>
+</html>

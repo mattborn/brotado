@@ -1,0 +1,32 @@
+@import 'base.css';
+
+/*  Modals  */
+
+.stacked {
+	box-shadow: 0 -1px 10px rgba(0,0,0,.1);
+	margin-left: -360px;
+	position: absolute;
+	top: 30px; left: 50%;
+}
+
+/*  Demo  */
+
+.demo {
+	background: rgba(255,255,255,.9);
+	border-left: 3px solid #ec0;
+	line-height: 20px;
+	padding: 5px 0;
+	position: fixed;
+	top: 5px; left: 5px;
+}
+.demo.single { border-color: #7c4; }
+.demo.multiple { border-color: #d43; }
+.demo a { display: block; opacity: .7; padding: 5px 10px; }
+.demo a:hover,
+.demo a.active { background: #fff; opacity: 1; }
+.demo b { display: block; }
+.demo span { color: #999; }
+
+/*  Stubs  */
+
+.content-stub { height: 1000px; background: #ddd; }

@@ -1,0 +1,5 @@
+@import '../shared.css';
+
+html { background: url(images/Obama-is-pissed.jpg); background-size: cover; }
+
+.permissions { color: #fff; font-weight: 600; padding: 50px; }

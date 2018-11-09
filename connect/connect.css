@@ -1,0 +1,332 @@
+
+/*  Minimal reset  */
+
+a,
+body,
+div,
+form,
+h1,
+h2,
+h3,
+input,
+li,
+ol,
+p,
+ul,
+textarea {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+a { text-decoration: none; }
+
+img { vertical-align: bottom; }
+
+textarea { resize: none; }
+
+/*  Basic interface  */
+
+html {
+	height: 100%;
+	background: #eee;
+	font: 100%/1 'Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+.group:after {
+	height: 0;
+	clear: both;
+	content: "\0020";
+	display: block;
+	visibility: hidden;
+}
+
+/*  Theme in flux, between old and new.  */
+
+a { color: #4b6; }
+a:hover { color: #0ad; }
+
+/*  Development only  */
+
+#connect-test {
+	width: 800px;
+	color: #bbb;
+	font-size: 13px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	line-height: 40px;
+	margin: 0 auto;
+	padding: 40px 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+#connect-test p { margin: 15px 0 0; }
+#connect-test a { margin: 0 10px; }
+
+/*  Connect modal  */
+
+#connect,
+#connect-choose {
+	width: 720px; height: 480px;
+	margin: -240px 0 0 -360px;
+	padding: 20px 30px;
+}
+#connect .header,
+#connect-choose .header { margin: 0 0 20px; }
+#connect .modal-title,
+#connect-choose .modal-title { float: left; }
+#connect .group-select,
+#connect-choose .group-select {
+	color: #ccc;
+	float: right;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 30px;
+}
+#connect .in-group,
+#connect-choose .in-group { margin-right: 10px; }
+
+#connect .networks {
+	height: 120px;
+	border: 1px solid #333;
+	border-width: 1px 1px 1px 0;
+	box-shadow: 0 1px rgba(255,255,255,.1);
+	margin: 0 0 30px;
+}
+#connect .network {
+	width: 110px; height: 120px;
+	background: rgba(255,255,255,.08) url(network-icons.png) no-repeat;
+	border-left: 1px solid #333;
+	box-shadow: 0 1px rgba(255,255,255,.1) inset;
+	color: #ccc;
+	float: left;
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	line-height: 14px;
+	opacity: .8;
+	padding: 92px 0 14px;
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+}
+#connect .network:hover {
+	background-color: rgba(255,255,255,.1);
+	color: #fff;
+	opacity: 1;
+}
+#connect .network:active,
+#connect .network.active {
+	box-shadow: inset 0 0 30px rgba(0,0,0,0.3);
+	color: #fff;
+	opacity: 1;
+}
+#connect-networks .twitter { background-position: center 0; }
+#connect-networks .twitter:active,
+#connect-networks .twitter.active { background-color: #2BA9E1; }
+#connect-networks .facebook { background-position: center -240px; }
+#connect-networks .facebook:active,
+#connect-networks .facebook.active { background-color: #3B5998; }
+#connect-networks .google { background-position: center -480px; }
+#connect-networks .google:active,
+#connect-networks .google.active { background-color: #C63D2D; }
+#connect-networks .linkedin { background-position: center -720px; }
+#connect-networks .linkedin:active,
+#connect-networks .linkedin.active { background-color: #4875B4; }
+#connect-networks .analytics { background-position: center -960px; }
+#connect-networks .analytics:active,
+#connect-networks .analytics.active { background-color: #ED9C3A; }
+#connect-networks .reader { width: 109px; background-position: center -1200px; }
+#connect-networks .reader:active,
+#connect-networks .reader.active { background-color: #DD4B39; }
+#connect-networks .analytics,
+#connect-networks .reader { padding: 76px 0 14px; }
+
+#connect .content,
+#connect-choose .content {
+	height: 180px;
+	background: rgba(255,255,255,.08);
+	border: 1px solid #333;
+	box-shadow: 0 1px rgba(255,255,255,.1) inset, 0 1px rgba(255,255,255,.1);
+	font-weight: 600;
+	margin: 0 0 20px;
+	padding: 20px;
+	position: relative;
+	text-align: center;
+}
+#connect .default .stub-title,
+#connect .add .stub-title,
+#connect .limit .stub-title {
+	color: #fff;
+	font-size: 16px;
+	letter-spacing: 2px;
+	line-height: 30px;
+	margin: 0 0 10px;
+	text-transform: uppercase;
+}
+#connect .stub-text { font-size: 14px; line-height: 1.5; }
+#connect .stub-profile { margin-bottom: 20px; }
+#connect .stub-avatar {
+	width: 48px; height: 48px;
+	background: #333;
+	margin-right: 15px;
+}
+#connect .stub-username {
+	color: #fff;
+	font-size: 24px;
+	font-weight: normal;
+	position: relative;
+	top: 18px; /* baseline shift */
+}
+#connect .stub-check {
+	width: 30px; height: 48px;
+	background: #4b6 url(../../images/checkmark.png) no-repeat center;
+	display: inline-block;
+	margin-right: -4px;
+	text-indent: -9999px;
+}
+.stub-connected {
+	color: #fff;
+	display: block;
+	font-size: 18px;
+	margin: 0 0 10px;
+}
+
+.stub { display: none; }
+.stub:first-child { display: block; }
+
+#connect .status,
+#connect-choose .status {
+	color: #999;
+	float: left;
+	font-size: 14px;
+	font-weight: 600;
+	padding: 8px 0;
+}
+#connect .actions,
+#connect-choose .actions { float: right; }
+#connect .cancel,
+#connect .or,
+#connect-choose .cancel,
+#connect-choose .or { font-size: 14px; font-weight: bold; line-height: 30px; }
+#connect .cancel,
+#connect-choose .cancel { color: #bbb; }
+#connect .cancel:hover,
+#connect-choose .cancel:hover { border-bottom: 1px solid #fff; color: #fff; }
+#connect .or,
+#connect-choose .or { color: #999; margin: 0 10px 0 5px; }
+#connect .or,
+#connect .proceed,
+#connect .done { display: none; }
+
+#connect .loading { border-radius: 5px; position: absolute; }
+
+/*  Connect content  */
+
+#connect-content .default,
+#connect-content .add,
+#connect-content .limit { padding-top: 35px; }
+#connect-content .twitter.add { padding: 25px 300px 0 20px; text-align: left; }
+#connect-content .twitter.add img { position: absolute; top:8px; right: 20px; }
+#connect-content .twitter.add img {
+	width: 300px; height: 170px; background: #222; } /* dev only */
+#connect-content .facebook.add { padding: 10px 80px 0; }
+#connect-content .personal.add { padding: 10px 60px 0; }
+#connect-content .facebook.add .inline-link,
+#connect-content .personal.add .inline-link {
+	display: inline-block;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 20px 0 0 0;
+}
+#connect-content .analytics.add,
+#connect-content .reader.add { padding: 25px 120px 0; }
+#connect-content .success { padding-top: 10px; }
+#connect-content .reader.success { padding: 0; }
+#connect-content .reader.success .stub-profile { margin-bottom: 10px; }
+#connect-content .reader.success .stub-check {
+	width: 48px; height: 48px;
+	border-radius: 24px;
+	display: inline-block;
+	margin-right: 15px;
+}
+#connect-content .reader-options { margin: 0 0 10px; }
+#connect-content .reader-options .or {
+	display: inline-block;
+	line-height: 1;
+	margin: 0 10px;
+}
+
+/*  Connect choose  */
+
+.logged-as { color: #999; float: left; font-size: 14px; }
+
+#connect-choose { display: none; }
+#connect-choose .content { height: 332px; }
+
+/*  Global + Theme  */
+
+.modal { border-radius: 5px; position: fixed; top: 50%; left: 50%; }
+.modal { background: #444; color: #bbb; text-shadow: 0 1px rgba(0,0,0,.5); }
+.modal-title {
+	color: #fff;
+	font-size: 16px;
+	letter-spacing: 2px;
+	line-height: 30px;
+	text-transform: uppercase;
+}
+.modal .inline-link { color: #bbb; }
+.modal .inline-link:hover { border-bottom: 1px solid #fff; color: #fff; }
+
+.button {
+	background-color: #72ba45;
+	background-image: linear-gradient(top, #72ba45, #55a045);
+	border-color: #57a145;
+	border-radius: 3px;
+	border-width: 1px;
+	box-shadow: 0 1px rgba(255,255,255,.3) inset, 0 1px rgba(0,0,0,.2);
+	color: white;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 30px;
+	letter-spacing: 1px;
+	padding: 0 20px;
+	text-shadow: 0 1px rgba(0,0,0,.5);
+	text-transform: uppercase;
+}
+.button:hover { background-image: none; color: #fff; }
+
+.select {
+	background-color: #777;
+	background-image: linear-gradient(top, #777, #555);
+	border: 1px solid #333;
+	border-radius: 3px;
+	box-shadow: 0 1px rgba(255,255,255,.1) inset, 0 1px rgba(255,255,255,.1);
+	color: #fff;
+	display: inline-block;
+	line-height: 30px;
+	padding: 0 35px 0 15px;
+	position: relative;
+}
+.select:after {
+	color: #333;
+	content: '▼';
+	display: block;
+	position: absolute;
+	top: 0; right: 15px;
+	text-shadow: 0 1px rgba(255,255,255,.3);
+	transform: scaleX(1.5); /* http://css-tricks.com/triangle-with-shadow */
+}
+.select:hover { background-image: linear-gradient(top, #777, #666); color: #fff; }
+
+.loading {
+	width: 100%; height: 100%;
+	background: #000 url(images/spinner.gif) no-repeat center; opacity: .7;
+	display: none;
+	position: fixed;
+	top: 0; left: 0;
+}
+

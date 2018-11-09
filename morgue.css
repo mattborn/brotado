@@ -1,0 +1,118 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+*,
+*:after { box-sizing: border-box; }
+
+html {
+	height: 100%;
+	background: #eee;
+	color: #4d4d4d;
+	font: 14px/1 'Montserrat', sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+body { height: 100%; margin: 0; }
+
+h1,
+h2 { margin: 0; }
+ul { list-style-type: none; padding: 0; }
+
+a { color: #369; }
+
+/*  Cover  */
+
+.cover {
+	height: 95%;
+	background: url(morgue.jpg) fixed center;
+	background-size: cover;
+	position: relative;
+}
+
+.cover-heading {
+	width: 100%;
+	color: rgba(255,255,255,.8);
+	font-size: 72px;
+	letter-spacing: .1em;
+	margin-top: -36px;
+	position: absolute;
+	top: 50%; left: 0;
+	text-align: center;
+	text-shadow: 5px 5px rgba(255,255,255,.2);
+	text-transform: uppercase;
+}
+
+/*  Content  */
+
+.content { max-width: 1070px; margin: 0 auto; padding: 0 25px; }
+
+.morgue-heading {
+	border-bottom: 1px solid #ccc;
+	color: #999;
+	font: 24px/1.2 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	letter-spacing: .02em;
+	margin-bottom: 20px;
+	padding: 100px 250px 100px 100px;
+}
+
+.morgue-items { margin: 0 -20px -20px 0; }
+.morgue-items:after { clear: both; content: ''; display: table; }
+.morgue-item {
+	width: 240px;
+	background: #fff;
+	border-radius: 4px;
+	box-shadow: 0 1px 2px rgba(0,0,0,.15);
+	float: left;
+	margin: 0 20px 20px 0;
+}
+.morgue-item-a { display: block; position: relative; text-decoration: none; }
+.morgue-item-a:hover { text-decoration: underline; }
+.morgue-item-a:hover .morgue-item-img { opacity: .5; }
+.morgue-item-a:hover:after { opacity: .95; }
+.morgue-item-a:after {
+	width: 80px; height: 80px;
+	background: #369;
+	border-radius: 50%;
+	color: #fff;
+	content: 'View';
+	display: block;
+	font-size: 11px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	opacity: 0;
+	padding: 36px 0 0 2px;
+	position: absolute;
+	top: 50px; left: 80px;
+	text-align: center;
+	text-transform: uppercase;
+	transition: .3s;
+}
+.morgue-item-img {
+	width: 240px; height: 180px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	box-shadow: inset 0 1px 2px rbga(0,0,0,.5);
+	opacity: 1;
+	transition: .3s;
+}
+.morgue-item-b {
+	min-height: 60px;
+	display: block;
+	font-size: 16px;
+	padding: 15px;
+}
+.morgue-item-tags {
+	color: #bbb;
+	display: block;
+	font-size: 13px;
+	margin: 15px;
+}
+
+.morgue-footing {
+	background: #234;
+	color: rgba(255,255,255,.5);
+	line-height: 1.3;
+	margin-top: 50px;
+	padding: 200px 25px;
+	text-align: center;
+}
+.morgue-footing a { color: inherit; margin-left: 10px; transition: .3s; }
+.morgue-footing a:hover { color: #fff; }

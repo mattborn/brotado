@@ -1,0 +1,168 @@
+
+html {
+	height: 100%;
+	background: #eee;
+	color: #555;
+	font: 14px/1 'proxima-nova', 'Helvetica Neue', Arial, sans-serif;
+	overflow-y: scroll;
+	-webkit-font-smoothing: antialiased;
+}
+
+body { min-height: 100%; margin: 0; }
+
+.center { width: 1140px; margin: 0 auto; padding: 0 30px; }
+.center:after { clear: both; content: ''; display: table; }
+
+.header { width: 100%; position: fixed; top: 0; left: 0; }
+.master { height: 30px; background: #6b2; display: none; position: relative; }
+.utility {
+	height: 30px;
+	background: #222;
+	line-height: 30px;
+	position: relative;
+}
+.primary { height: 60px; background: #444; position: relative; }
+.primary-routes { border-right: 1px solid rgba(255,255,255,.1); float: left; }
+.primary-routes:after { clear: both; content: ''; display: table; }
+.primary-branding {
+	width: 250px; height: 60px;
+	border-right: 1px solid rgba(0,0,0,.4);
+	cursor: pointer;
+	float: left;
+}
+.primary-dashboard,
+.primary-messages,
+.primary-tasks,
+.primary-reports {
+	width: 120px; height: 60px;
+	border-right: 1px solid rgba(0,0,0,.4);
+	border-left: 1px solid rgba(255,255,255,.1);
+	cursor: pointer;
+	float: left;
+}
+.primary-branding:hover,
+.primary-dashboard:hover,
+.primary-messages:hover,
+.primary-tasks:hover,
+.primary-reports:hover,
+.primary-branding.active,
+.primary-dashboard.active,
+.primary-messages.active,
+.primary-tasks.active,
+.primary-reports.active { background: rgba(255,255,255,.05); }
+.panel {
+	width: 100%; min-height: 100px;
+	background: #333;
+	display: none;
+	position: fixed;
+	top: 90px; left: 0;
+}
+
+.page { padding: 120px 0 30px; }
+.page .center { display: none; }
+.page-middle { margin-bottom: 30px; }
+.page-middle:after { clear: both; content: ''; display: table; }
+
+.modal {
+	width: 100%; height: 100%;
+	background: rgba(0,0,0,.7);
+	overflow-y: auto;
+	position: fixed;
+	top: 0; left: 0;
+}
+.dark,
+.light {
+	width: 720px; height: 480px;
+	margin: -240px 0 0 -360px;
+	position: absolute;
+	top: 50%; left: 50%;
+}
+.dark { background: #333; }
+.light { background: #eee; }
+.scrodal {
+	width: 720px; height: 2000px;
+	background: #eee;
+	margin: 30px auto;
+}
+.tallboy { width: 720px; height: 100%; background: #eee; margin: 0 auto; }
+
+/* Stubs */
+
+.safe {
+	width: 1140px; height: 100%;
+	border-left: 1px solid rgba(0,0,0,.1);
+	border-right: 1px solid rgba(0,0,0,.1);
+	display: none;
+	margin-left: -571px;
+	position: fixed;
+	top: 0; left: 50%;
+}
+
+.dashboard-main,
+.dashboard-side,
+.messages-main,
+.messages-side,
+.tasks-main,
+.reports-main,
+.reports-side,
+.settings-side,
+.settings-main { min-height: 700px; background: #fff; }
+
+.dashboard-main,
+.reports-main { width: 860px; float: left; }
+.dashboard-side,
+.reports-side { width: 250px; float: right; }
+.dashboard-footer { height: 300px; background: #fff; }
+
+.messages-main { width: 670px; float: left; }
+.messages-side { width: 440px; float: right; }
+
+.settings-side { width: 250px; float: left; }
+.settings-main { width: 860px; float: right; }
+
+
+/* Messages */
+
+.default-button,
+.blue-button { width: 120px; height: 40px; display: inline-block; }
+
+.default-button { background: #ccc; }
+.blue-button { background: #3b5998; }
+
+.message-list { list-style-type: none; padding: 0; }
+.message-item {
+	min-height: 100px;
+	background: #fff;
+	margin-bottom: 1px;
+	padding: 10px 10px 10px 70px;
+	position: relative;
+}
+.message-avatar {
+	width: 50px; height: 50px;
+	position: absolute;
+	top: 10px; left: 10px;
+ }
+.message-text {
+	font-size: 16px;
+	line-height: 1.3;
+	margin: 0;
+}
+
+/*  States  */
+
+.states {
+	width: 200px; height: 50px;
+	border: 1px solid #fff;
+	overflow: hidden;
+	position: fixed;
+	bottom: 30px; left: 30px;
+}
+.states-offset {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0; left: 0;
+}
+.state { color: #bbb; font-size: 20px; line-height: 50px; padding: 0 20px; }
+

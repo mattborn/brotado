@@ -1,0 +1,70 @@
+
+#team-report { visibility: visible; }
+
+/*  Publishing  */
+
+.publishing-item {
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	padding: 10px;
+	text-transform: uppercase;
+	vertical-align: bottom;
+}
+.publishing-item-avatar,
+.task-item-avatar {
+	width: 50px; height: 50px;
+	float: left;
+	margin-right: 20px;
+}
+.publishing-item-meta,
+.publishing-item-bar-graph { width: 730px; float: left; }
+.publishing-item-meta { height: 20px; line-height: 20px; margin: 10px 0; }
+.publishing-item-name { margin-right: 10px; }
+.publishing-item-average {
+	color: #bbb;
+	font-weight: normal;
+	text-transform: lowercase;
+}
+.publishing-item-replies,
+.publishing-item-total { color: #7AC143; }
+.publishing-item-bar-graph { height: 10px; background: #7AC143; }
+
+/*  Tasks  */
+
+.team-tasks-table { width: 100%; border-collapse: collapse; border-spacing: 0; }
+.team-tasks-table th,
+.team-tasks-table td { padding: 10px; text-align: center; }
+.team-tasks-table th:first-child,
+.team-tasks-table td:first-child,
+.team-tasks-table td:last-child { text-align: left; }
+.team-tasks-table th {
+	color: rgb(19,101,168);
+	font-size: 12px;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+.team-tasks-table td:first-child { padding: 5px; }
+.team-tasks-table td { font-size: 24px; font-weight: normal; }
+.team-tasks-table td:last-child { color: rgb(19,101,168); }
+
+.task-item:nth-child(even) { background: #eee; }
+.task-item-avatar { width: 40px; height: 40px; margin-right: 10px; }
+.task-item-name { font-size: 18px; line-height: 20px; }
+.task-item-role {
+	color: #999;
+	display: block;
+	font-size: 12px;
+}
+.task-item-ratio .value {
+	width: 50px;
+	float: left;
+	line-height: 30px;
+	text-align: right;
+}
+.task-item-bar-graph {
+	width: 100px; height: 30px;
+	background: rgb(19,101,168);
+	float: right;
+	vertical-align: bottom;
+}

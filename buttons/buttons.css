@@ -1,0 +1,184 @@
+html {
+	background: #eee;
+	color: #555;
+	font: 14px/1 'proxima-nova', 'Helvetica Neue', Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+body { margin: 0; }
+
+a { text-decoration: none; }
+
+img { vertical-align: bottom; }
+
+.center { width: 1140px; margin: 0 auto; padding: 0 20px; }
+.center:after { clear: both; content: ''; display: table; }
+
+body { padding: 50px; }
+
+.buttons { list-style-type: none; margin-bottom: 30px; padding: 0; }
+.buttons li { margin-bottom: 10px; }
+.shadow { text-shadow: 0 1px rgba(0,0,0,.1); }
+.dark { background: #444; padding: 30px; }
+.borderless a { border: 0 !important; }
+
+.submit-button,
+.black-button,
+.default-button,
+.disabled-button,
+.facebook-button,
+.twitter-button,
+.google-button,
+.orange-button,
+.yellow-button,
+.dark-default-button,
+.dark-disabled-button,
+.submit-hi-button,
+.black-hi-button,
+.default-hi-button,
+.disabled-hi-button,
+.facebook-hi-button,
+.twitter-hi-button,
+.google-hi-button,
+.orange-hi-button,
+.yellow-hi-button,
+.dark-submit-hi-button,
+.dark-default-hi-button,
+.dark-disabled-hi-button,
+.dark-facebook-hi-button,
+.dark-twitter-hi-button,
+.dark-google-hi-button,
+.dark-orange-hi-button,
+.dark-yellow-hi-button {
+	border-radius: 5px;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: bold;
+	letter-spacing: 2px;
+	line-height: 30px;
+	padding: 0 20px;
+	text-align: center;
+	text-transform: uppercase;
+}
+.submit-button { background: #6b2; }
+.black-button { background: #333; }
+.default-button { background: #bbb; }
+.disabled-button { background: #ddd; color: #eee; }
+.facebook-button { background: #359; }
+.twitter-button { background: #0ae; }
+.google-button { background: #d43; }
+.orange-button { background: #f93; }
+.yellow-button { background: #ec0; }
+
+.dark-default-button,
+.dark-default-hi-button:hover { background: #666; }
+.dark-disabled-button,
+.dark-disabled-hi-button { background: #555; color: #444; }
+
+.submit-hi-button,
+.black-hi-button,
+.default-hi-button,
+.disabled-hi-button,
+.facebook-hi-button,
+.twitter-hi-button,
+.google-hi-button,
+.orange-hi-button,
+.yellow-hi-button,
+.dark-submit-hi-button,
+.dark-default-hi-button,
+.dark-disabled-hi-button,
+.dark-facebook-hi-button,
+.dark-twitter-hi-button,
+.dark-google-hi-button,
+.dark-orange-hi-button,
+.dark-yellow-hi-button {
+	border: 1px solid #fff;
+	box-shadow: inset 0 1px rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.15);
+	text-shadow: 0 1px rgba(0,0,0,.15);
+}
+
+.submit-hi-button,
+.dark-submit-hi-button {
+	background: linear-gradient(to bottom, #76c239, #6b2);
+	border-color: #5ca81f;
+}
+.black-hi-button,
+.dark-black-hi-button {
+	background: linear-gradient(to bottom, #444, #333);
+	border-color: #333;
+}
+.default-hi-button {
+	background: linear-gradient(to bottom, #ccc, #bbb);
+	border-color: #aaa;
+}
+.disabled-hi-button,
+.dark-disabled-hi-button { box-shadow: none; text-shadow: none; }
+.disabled-hi-button {
+	background: linear-gradient(to bottom, #eee, #ddd);
+	border-color: #ddd;
+	color: #ccc;
+}
+.facebook-hi-button,
+.dark-facebook-hi-button {
+	background: linear-gradient(to bottom, #4866a3, #359);
+	border-color: #2e4c89;
+}
+.twitter-hi-button,
+.dark-twitter-hi-button {
+	background: linear-gradient(to bottom, #1ab3f0, #0ae);
+	border-color: #0099d6;
+}
+.google-hi-button,
+.dark-google-hi-button {
+	background: linear-gradient(to bottom, #e05748, #d43);
+	border-color: #c63d2e;
+}
+.orange-hi-button,
+.dark-orange-hi-button {
+	background: linear-gradient(to bottom, #ffa348, #f93);
+	border-color: #e5892e;
+}
+.yellow-hi-button,
+.dark-yellow-hi-button {
+	background: linear-gradient(to bottom, #f0d11a, #ec0);
+	border-color: #d6b700;
+}
+.dark-default-hi-button {
+	background: linear-gradient(to bottom, #666, #555);
+}
+
+.dark-submit-hi-button,
+.dark-default-hi-button,
+.dark-disabled-hi-button,
+.dark-facebook-hi-button,
+.dark-twitter-hi-button,
+.dark-google-hi-button,
+.dark-orange-hi-button,
+.dark-yellow-hi-button { border: 0; }
+
+/*  Hover States  */
+
+.submit-button:hover,
+.submit-hi-button:hover,
+.dark-submit-hi-button:hover { background: #76c239; }
+.black-button:hover,
+.black-hi-button:hover { background: #444; }
+.default-button:hover,
+.default-hi-button:hover { background: #ccc; }
+.dark-default-button:hover { background: #777; }
+.facebook-button:hover,
+.facebook-hi-button:hover,
+.dark-facebook-hi-button:hover { background: #4866a3; }
+.twitter-button:hover,
+.twitter-hi-button:hover,
+.dark-twitter-hi-button:hover { background: #1ab3f0; }
+.google-button:hover,
+.google-hi-button:hover,
+.dark-google-hi-button:hover { background: #e05748; }
+.orange-button:hover,
+.orange-hi-button:hover,
+.dark-orange-hi-button:hover { background: #ffa348; }
+.yellow-button:hover,
+.yellow-hi-button:hover,
+.dark-yellow-hi-button:hover { background: #f0d11a; }

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Buttons</title>
+	<link rel="stylesheet" href="shell.css">
+</head>
+<body>
+	<div class="center">
+		<div class="document">
+			<h1>Buttons</h1>
+			<p>The S2 approach of using a generic <code>.button</code> class combined with another class for specific color treatment is being deprecated in favor of the <a href="#">single class approach</a>.</p>
+			<h2>Deprecated Classes</h2>
+			<p>All instances of the following classes will be replaced.</p>
+			<ul>
+				<li>.button</li>
+				<li>.button .primary</li>
+				<li>.button .secondary</li>
+				<li>.button .action</li>
+				<li>.button .google-btn</li>
+				<li>.button .twitterblue</li>
+				<li>.button @button-gradient-sky-blue()</li>
+				<li>.button @button-gradient-orange()</li>
+				<li>.button .cta span.big</li>
+				<li>.button .subtle</li>
+				<li>.button .primary .wide</li>
+				<li>.button .sooth</li>
+				<li>.button .primary (on dark)</li>
+			</ul>
+			<h2>Audit</h2>
+			<p>Using regex search <code>class=.*{name}</code></p>
+			<table>
+				<thead>
+					<tr>
+					  <th>Class</th>
+					  <th>Instances</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+					  <td>.button</td>
+					  <td>324 ?</td>
+					</tr>
+					<tr>
+					  <td>.primary</td>
+					  <td>124</td>
+					</tr>
+					<tr>
+					  <td>.secondary</td>
+					  <td>44</td>
+					</tr>
+					<tr>
+					  <td>.action</td>
+					  <td>244 ?</td>
+					</tr>
+					<tr>
+					  <td>.google-btn</td>
+					  <td>3</td>
+					</tr>
+					<tr>
+					  <td>.twitterblue</td>
+					  <td>2</td>
+					</tr>
+					<tr>
+					  <td>.cta</td>
+					  <td>39 ?</td>
+					</tr>
+					<tr>
+					  <td>.subtle</td>
+					  <td>74 ?</td>
+					</tr>
+					<tr>
+					  <td>.sooth</td>
+					  <td>13</td>
+					</tr>
+				</tbody>
+			</table>
+			<p>? found unrelated instances</p>
+			<h2>New Classes</h2>
+			<ul>
+				<li>.submit-button</li>
+				<li>.black-button</li>
+				<li>.default-button</li>
+				<li>.disabled-button</li>
+				<li>.facebook-button</li>
+				<li>.twitter-button</li>
+				<li>.google-button</li>
+				<li>.orange-button</li>
+				<li>.yellow-button</li>
+				<li>.dark-default-button</li>
+				<li>.dark-disabled-button</li>
+				<li>.submit-hi-button</li>
+				<li>.black-hi-button</li>
+				<li>.default-hi-button</li>
+				<li>.disabled-hi-button</li>
+				<li>.facebook-hi-button</li>
+				<li>.twitter-hi-button</li>
+				<li>.google-hi-button</li>
+				<li>.orange-hi-button</li>
+				<li>.yellow-hi-button</li>
+				<li>.dark-submit-hi-button</li>
+				<li>.dark-default-hi-button</li>
+				<li>.dark-facebook-hi-button</li>
+				<li>.dark-twitter-hi-button</li>
+				<li>.dark-google-hi-button</li>
+				<li>.dark-orange-hi-button</li>
+				<li>.dark-yellow-hi-button</li>
+			</ul>
+		</div>
+		<iframe src="buttons.html"></iframe>
+	</div>
+</body>
+</html>

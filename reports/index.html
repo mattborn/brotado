@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Reports Boilerplate</title>
+	<link rel="stylesheet" href="css/global.css">
+	<link rel="stylesheet" href="css/reports.css">
+</head>
+<body>
+	<div id="actions"></div><!-- #actions -->
+	<div id="overview-report" class="report">
+		<h1>Reports Overview</h1>
+		<p class="lead">"All design is systems design."</p>
+		<p>This is just a prototype.</p>
+
+		<h2>Initiatives</h2>
+		<ul>
+			<li>new group report / dashboard</li>
+			<li>new "left hand" navigation</li>
+			<li>new date picker</li>
+			<li>new profile picker</li>
+		</ul>
+	</div><!-- #overview-report -->
+	<div id="engagement-report" class="report" role="main">
+		<header class="pillow report-header">
+			<div class="report-icon"></div>
+			<h1 class="report-title">Engagement Report</h1>
+			<div class="report-range">
+				<time datetime="2013-01-20">Jan 20, 2013</time>
+				<span class="through"> through </span>
+				<time datetime="2013-02-20">Feb 20, 2013</time>
+			</div><!-- .date-range -->
+		</header><!-- .report-header -->
+		<section id="message-volume" class="pillow">
+			<header class="pillow-header">
+				<h1 class="pillow-title">Incoming &amp; Outgoing Messages</h1>
+			</header><!-- .pillow-header -->
+			<div class="pillow-content">
+				<div id="message-volume-graph" class="group">
+					<div class="line-bar-graph">
+					</div><!-- .line-bar-graph -->
+					<div class="graph-summary">
+						<p class="single-metric incoming">
+							<span class="single-metric-value">100K</span>
+							<span class="single-metric-label">Incoming</span>
+						</p>
+						<p class="single-metric outgoing">
+							<span class="single-metric-value">100K</span>
+							<span class="single-metric-label">Outgoing</span>
+						</p>
+					</div><!-- .graph-summary -->
+				</div><!-- #message-volume-graph -->
+				<div id="message-volume-week" class="group">
+					<h2 class="subtitle">
+						<span class="subtitle-offset">By Day of the Week</span>
+					</h2>
+					<div class="incoming">
+						<div class="graph-summary">
+							<p>You receive the <br>most messages on <span class="day-week-value">{{this_day}}</span></p>
+						</div><!-- .graph-summary -->
+						<div class="day-week-graph">
+						</div><!-- .day-week-graph -->
+					</div><!-- .incoming -->
+					<div class="incoming">
+						<div class="day-week-graph">
+						</div><!-- .day-week-graph -->
+						<div class="graph-summary">
+							<p>You publish the <br>most messages on <span class="day-week-value">{{this_day}}</span></p>
+						</div><!-- .graph-summary -->
+					</div><!-- .incoming -->
+				</div><!-- #message-volume-week -->
+			</div><!-- .pillow-content -->
+		</section><!-- #message-volume -->
+		<section id="response-rate" class="pillow">
+			<header class="pillow-header">
+				<h1 class="pillow-title">Response Rate</h1>
+			</header><!-- .pillow-header -->
+			<div class="pillow-content">
+				<div id="response-rate-graph" class="group">
+					<div class="line-bar-graph">
+					</div><!-- .line-bar-graph -->
+					<div class="graph-summary">
+						<p class="single-metric rate">
+							<span class="single-metric-value">100</span>
+							<span class="single-metric-unit">%</span>
+							<span class="single-metric-label">Response Rate</span>
+						</p>
+					</div><!-- .graph-summary -->
+				</div><!-- #response-rate-graph -->
+				<div id="response-rate-time" class="group">
+					<div class="line-bar-graph">
+					</div><!-- .line-bar-graph -->
+					<div class="graph-summary">
+						<p class="single-metric time">
+							<span class="single-metric-value">100</span>
+							<span class="single-metric-unit">mins</span>
+							<span class="single-metric-label">Average <br>Response Time</span>
+						</p>
+					</div><!-- .graph-summary -->
+				</div><!-- #response-rate-time -->
+				<p class="inline-metric volume">
+					<span class="inline-metric-value">500k</span>
+					<span class="inline-metric-label">messages warranted a response</span>
+				</p>
+				<div id="#response-rate-week" class="group">
+					<h2 class="subtitle">
+						<span class="subtitle-offset">By Day of the Week</span>
+					</h2>
+					<div class="custom-graph">
+					</div><!-- .custom-graph -->
+				</div><!-- #response-rate-week -->
+				<div id="#response-rate-hour" class="group">
+					<h2 class="subtitle">
+						<span class="subtitle-offset">By Hour of the Day</span>
+					</h2>
+					<div id="response-rate-hour-rate" class=
+					"custom-graph rate">
+					</div><!-- #response-rate-hour-rate -->
+					<div id="response-rate-hour-time" class="custom-graph time">
+					</div><!-- #response-rate-hour-time -->
+				</div><!-- #response-rate-hour -->
+			</div><!-- .pillow-content -->
+		</section><!-- #response-rate -->
+	</div><!-- #engagement-report -->
+	<div id="audience-report" class="report" role="main">
+		<header class="pillow report-header">
+			<div class="report-icon"></div>
+			<h1 class="report-title">Audience Report</h1>
+			<div class="report-range">
+				<time datetime="2013-01-20">Jan 20, 2013</time>
+				<span class="through"> through </span>
+				<time datetime="2013-02-20">Feb 20, 2013</time>
+			</div><!-- .date-range -->
+		</header><!-- .report-header -->
+		<section id="facebook-audience" class="pillow">
+			<header class="pillow-header">
+				<h1 class="pillow-title">Facebook Audience</h1>
+			</header><!-- .pillow-header -->
+			<div class="pillow-content">
+				<div id="facebook-likes-graph" class="group">
+					<div class="mirror-bar-graph">
+					</div><!-- .mirror-bar-graph -->
+					<div class="graph-summary">
+						<p class="single-metric likes">
+							<span class="single-metric-value">100K</span>
+							<span class="single-metric-label">New Fans</span>
+						</p>
+						<p class="single-metric unlikes">
+							<span class="single-metric-value">100</span>
+							<span class="single-metric-label">Unlikes</span>
+						</p>
+					</div><!-- .graph-summary -->
+				</div><!-- #facebook-likes-graph -->
+				<div id="facebook-age-gender" class="group">
+					<h2 class="subtitle">
+						<span class="subtitle-offset">Impressions by Age &amp; Gender</span>
+					</h2>
+					<div id="facebook-age">
+						<div class="horizontal-graph">
+						</div><!-- .horizontal-graph -->
+					</div><!-- #facebook-age -->
+					<div id="facebook-gender">
+						<div class="donut-graph">
+						</div><!-- .donut-graph -->
+					</div><!-- #facebook-gender -->
+				</div><!-- #facebook-age-gender -->
+			</div><!-- .pillow-content -->
+		</section><!-- #facebook-audience -->
+		<section id="twitter-audience" class="pillow">
+			<header class="pillow-header">
+				<h1 class="pillow-title">twitter Audience</h1>
+			</header><!-- .pillow-header -->
+			<div class="pillow-content">
+				<div id="twitter-likes-graph" class="group">
+					<div class="bar-graph">
+					</div><!-- .bar-graph -->
+					<div class="graph-summary">
+						<p class="single-metric likes">
+							<span class="single-metric-value">100K</span>
+							<span class="single-metric-label">New Followers</span>
+						</p>
+					</div><!-- .graph-summary -->
+				</div><!-- #twitter-likes-graph -->
+				<div id="twitter-age-gender" class="group">
+					<h2 class="subtitle">
+						<span class="subtitle-offset">By Age &amp; Gender</span>
+					</h2>
+					<div id="twitter-age">
+						<div class="horizontal-graph">
+						</div><!-- .horizontal-graph -->
+					</div><!-- #twitter-age -->
+					<div id="twitter-gender">
+						<div class="donut-graph">
+						</div><!-- .donut-graph -->
+						<p class="inline-metric">
+								<span class="inline-metric-value">{{this_gender}}</span> between ages of <span class="inline-metric-value">{{this_age}}</span> appear to be the leading force among your followers.</p>
+					</div><!-- #twitter-gender -->
+				</div><!-- #twitter-age-gender -->
+			</div><!-- .pillow-content -->
+		</section><!-- #twitter-audience -->
+	</div><!-- #audience-report -->
+	<div id="facebook-report" class="report" role="main">
+		<header class="pillow report-header">
+			<div class="report-icon"></div>
+			<h1 class="report-title">Facebook Report</h1>
+			<div class="report-range">
+				<time datetime="2013-01-21">Jan 21, 2013</time>
+				<span class="through"> through </span>
+				<time datetime="2013-02-21">Feb 21, 2013</time>
+			</div><!-- .date-range -->
+		</header><!-- .report-header -->
+		<section id="facebook-summary" class="pillow">
+			<header class="pillow-header">
+				<h1 class="pillow-title">Summary</h1>
+			</header><!-- .pillow-header -->
+			<div class="pillow-content">
+				<div id="facebook-summary-metrics" class="group">
+					<p class="single-metric">
+						<span class="single-metric-value">100K</span>
+						<span class="single-metric-label">Impressions</span>
+					</p>
+					<p class="single-metric">
+						<span class="single-metric-value">100K</span>
+						<span class="single-metric-label">Stories Created</span>
+					</p>
+					<p class="single-metric">
+						<span class="single-metric-value">100K</span>
+						<span class="single-metric-label">Reached</span>
+					</p>
+					<p class="single-metric">
+						<span class="single-metric-value">2%</span>
+						<span class="single-metric-label">Engagement</span>
+					</p>
+				</div><!-- #facebook-summary-metrics -->
+			</div><!-- .pillow-content -->
+		</section><!-- #facebook-summary -->
+		<section id="facebook-likes" class="pillow">
+			<header class="pillow-header">
+				<h1 class="pillow-title">Likes</h1>
+			</header><!-- .pillow-header -->
+			<div class="pillow-content">
+				<div id="facebook-likes-graph" class="group">
+					<div class="mirror-bar-graph">
+					</div><!-- .mirror-bar-graph -->
+					<div class="graph-summary">
+						<p class="single-metric likes">
+							<span class="single-metric-value">100K</span>
+							<span class="single-metric-label">New Fans</span>
+						</p>
+						<p class="single-metric unlikes">
+							<span class="single-metric-value">100</span>
+							<span class="single-metric-label">Unlikes</span>
+						</p>
+					</div><!-- .graph-summary -->
+				</div><!-- #facebook-likes-graph -->
+				<p class="inline-metric">As of today, we have {{this-many}} total likes.</p>
+				<p class="inline-metric">During {{this-interval}}, {{this-many}} people talked about us.</p>
+			</div><!-- .pillow-content -->
+		</section><!-- #facebook-likes -->
+		<section id="facebook-volume" class="pillow">
+			<header class="pillow-header">
+				<h1 class="pillow-title">Incoming &amp; Outgoing Messages</h1>
+			</header><!-- .pillow-header -->
+			<div class="pillow-content">
+				<div id="facebook-volume-graph" class="group">
+					<div class="line-bar-graph">
+					</div><!-- .line-bar-graph -->
+					<div class="graph-summary">
+						<p class="single-metric incoming">
+							<span class="single-metric-value">100K</span>
+							<span class="single-metric-label">Incoming</span>
+						</p>
+						<p class="single-metric outgoing">
+							<span class="single-metric-value">100K</span>
+							<span class="single-metric-label">Outgoing</span>
+						</p>
+					</div><!-- .graph-summary -->
+				</div><!-- #facebook-volume-graph -->
+			</div><!-- .pillow-content -->
+		</section><!-- #facebook-volume -->
+		<section id="facebook-impressions" class="pillow">
+			<header class="pillow-header">
+				<h1 class="pillow-title">Impressions</h1>
+			</header><!-- .pillow-header -->
+			<div class="pillow-content">
+				<div id="facebook-impressions-graph" class="group">
+					<div class="line-bar-graph">
+					</div><!-- .line-bar-graph -->
+					<div class="graph-summary">
+						<p class="single-metric impressions">
+							<span class="single-metric-value">100K</span>
+							<span class="single-metric-label">Impressions</span>
+						</p>
+						<p class="single-metric unique">
+							<span class="single-metric-value">100K</span>
+							<span class="single-metric-label">Unique Users</span>
+						</p>
+					</div><!-- .graph-summary -->
+				</div><!-- #facebook-impressions-graph -->
+				<div id="facebook-impressions-week">
+					<h2 class="subtitle">
+						<span class="subtitle-offset">By Day of the Week</span>
+					</h2>
+					<div class="custom-graph">
+					</div><!-- .custom-graph -->
+				</div><!-- #facebook-impressions-week -->
+				<div id="facebook-impressions-breakdown">
+					<h2 class="subtitle">
+						<span class="subtitle-offset">Breakdown</span>
+					</h2>
+					<div class="allocation-graph">
+					</div><!-- .allocation-graph -->
+					<div class="allocation-graph">
+					</div><!-- .allocation-graph -->
+				</div><!-- #facebook-impressions-breakdown -->
+				<div id="facebook-impressions-demographics" class="group">
+					<div id="facebook-impressions-age-gender">
+						<h2 class="subtitle">
+							<span class="subtitle-offset">By Age &amp; Gender</span>
+						</h2>
+						<div class="horizontal-graph">
+						</div><!-- .horizontal-graph -->
+						<div class="donut-graph">
+						</div><!-- .donut-graph -->
+					</div><!-- #facebook-impressions-age-gender -->
+					<div id="facebook-impressions-location">
+						<h2 class="subtitle">
+							<span class="subtitle-offset">By Location</span>
+						</h2>
+						<div class="hairline-graph">
+						</div><!-- .hairline-graph -->
+						<div class="hairline-graph">
+						</div><!-- .hairline-graph -->
+					</div><!-- #facebook-impressions-location -->
+				</div><!-- #facebook-impressions-demographics -->
+			</div><!-- .pillow-content -->
+		</section><!-- #facebook-impressions -->
+		<section id="facebook-sharing" class="pillow">
+			<header class="pillow-header">
+				<h1 class="pillow-title">Sharing</h1>
+			</header><!-- .pillow-header -->
+			<div class="pillow-content">
+				<div id="facebook-sharing-graph" class="group">
+					<div class="line-bar-graph">
+					</div><!-- .line-bar-graph -->
+					<div class="graph-summary">
+						<p class="single-metric sharing">
+							<span class="single-metric-value">100K</span>
+							<span class="single-metric-label">sharing</span>
+						</p>
+						<p class="single-metric unique">
+							<span class="single-metric-value">100K</span>
+							<span class="single-metric-label">Unique Users</span>
+						</p>
+					</div><!-- .graph-summary -->
+				</div><!-- #facebook-sharing-graph -->
+				<div id="facebook-sharing-week">
+					<h2 class="subtitle">
+						<span class="subtitle-offset">By Day of the Week</span>
+					</h2>
+					<div class="custom-graph">
+					</div><!-- .custom-graph -->
+				</div><!-- #facebook-sharing-week -->
+				<div id="facebook-sharing-breakdown">
+					<h2 class="subtitle">
+						<span class="subtitle-offset">Breakdown</span>
+					</h2>
+					<div class="allocation-graph">
+					</div><!-- .allocation-graph -->
+				</div><!-- #facebook-sharing-breakdown -->
+				<div id="facebook-sharing-demographics" class="group">
+					<div id="facebook-sharing-age-gender">
+						<h2 class="subtitle">
+							<span class="subtitle-offset">By Age &amp; Gender</span>
+						</h2>
+						<div class="horizontal-graph">
+						</div><!-- .horizontal-graph -->
+						<div class="donut-graph">
+						</div><!-- .donut-graph -->
+					</div><!-- #facebook-sharing-age-gender -->
+					<div id="facebook-sharing-location">
+						<h2 class="subtitle">
+							<span class="subtitle-offset">By Location</span>
+						</h2>
+						<div class="hairline-graph">
+						</div><!-- .hairline-graph -->
+						<div class="hairline-graph">
+						</div><!-- .hairline-graph -->
+					</div><!-- #facebook-sharing-location -->
+				</div><!-- #facebook-sharing-demographics -->
+			</div><!-- .pillow-content -->
+		</section><!-- #facebook-sharing -->
+	</div><!-- #facebook-report -->
+	<div id="twitter-report" class="report" role="main">
+		<header class="pillow report-header">
+			<div class="report-icon"></div>
+			<h1 class="report-title">Twitter Report</h1>
+			<div class="report-range">
+				<time datetime="2013-01-21">Jan 21, 2013</time>
+				<span class="through"> through </span>
+				<time datetime="2013-02-21">Feb 21, 2013</time>
+			</div><!-- .date-range -->
+		</header><!-- .report-header -->
+		<section id="twitter-summary" class="pillow">
+			<header class="pillow-header">
+				<h1 class="pillow-title">Summary</h1>
+			</header><!-- .pillow-header -->
+			<div class="pillow-content">
+				<div id="twitter-summary-metrics" class="group">
+					<p class="single-metric">
+						<span class="single-metric-value">100K</span>
+						<span class="single-metric-label">Messages In</span>
+					</p>
+					<p class="single-metric">
+						<span class="single-metric-value">100K</span>
+						<span class="single-metric-label">Messages Out</span>
+					</p>
+					<p class="single-metric">
+						<span class="single-metric-value">100K</span>
+						<span class="single-metric-label">Impressions</span>
+					</p>
+					<p class="single-metric">
+						<span class="single-metric-value">1.00K</span>
+						<span class="single-metric-label">Clicks</span>
+					</p>
+				</div><!-- #twitter-summary-metrics -->
+			</div><!-- .pillow-content -->
+		</section><!-- #twitter-summary -->
+		<section id="twitter-followers" class="pillow">
+			<header class="pillow-header">
+				<h1 class="pillow-title">Followers</h1>
+			</header><!-- .pillow-header -->
+			<div class="pillow-content">
+				<div id="twitter-likes-graph" class="group">
+					<div class="mirror-bar-graph">
+					</div><!-- .mirror-bar-graph -->
+					<div class="graph-summary">
+						<p class="single-metric followers">
+							<span class="single-metric-value">100K</span>
+							<span class="single-metric-label">New Followers</span>
+						</p>
+					</div><!-- .graph-summary -->
+				</div><!-- #twitter-likes-graph -->
+				<p class="inline-metric">As of today, we have {{this-many}} total followers.</p>
+				<p class="inline-metric">During {{this-interval}}, we followed {{this-many}} profiles.</p>
+			</div><!-- .pillow-content -->
+		</section><!-- #twitter-followers -->
+		<section id="twitter-audience" class="pillow">
+			<header class="pillow-header">
+				<h1 class="pillow-title">Audience Demographics</h1>
+			</header><!-- .pillow-header -->
+			<div class="pillow-content">
+				<div id="twitter-engagement" class="group">
+					<div class="line-graph">
+					</div><!-- .line-graph -->
+					<div class="graph-summary">
+						<p class="single-metric engagement">
+							<span class="single-metric-value">100%</span>
+							<span class="single-metric-label">Engagement</span>
+						</p>
+						<p class="single-metric influence">
+							<span class="single-metric-value">100%</span>
+							<span class="single-metric-label">Influence</span>
+						</p>
+					</div><!-- .graph-summary -->
+				</div><!-- #twitter-engagement -->
+			</div><!-- .pillow-content -->
+		</section><!-- #twitter-audience -->
+		<section id="twitter-volume" class="pillow">
+			<header class="pillow-header">
+				<h1 class="pillow-title">Incoming &amp; Outgoing Messages</h1>
+			</header><!-- .pillow-header -->
+			<div class="pillow-content">
+				<div id="twitter-volume-graph" class="group">
+					<div class="line-bar-graph">
+					</div><!-- .line-bar-graph -->
+					<div class="graph-summary">
+						<p class="single-metric incoming">
+							<span class="single-metric-value">100K</span>
+							<span class="single-metric-label">Incoming</span>
+						</p>
+						<p class="single-metric outgoing">
+							<span class="single-metric-value">100K</span>
+							<span class="single-metric-label">Outgoing</span>
+						</p>
+					</div><!-- .graph-summary -->
+				</div><!-- #twitter-volume-graph -->
+				<div id="twiiter-volume-week">
+					<h2 class="subtitle">
+						<span class="subtitle-offset">By Day of the Week</span>
+					</h2>
+					<div class="custom-graph">
+					</div><!-- .custom-graph -->
+				</div><!-- #twiiter-volume-week -->
+			</div><!-- .pillow-content -->
+		</section><!-- #twitter-volume -->
+		<section id="twitter-breakdown" class="pillow">
+			<header class="pillow-header">
+				<h1 class="pillow-title">Content Breakdown</h1>
+			</header><!-- .pillow-header -->
+			<div class="pillow-content">
+				<div id="twitter-volume-graph" class="group">
+					<h2 class="subtitle">
+						<span class="subtitle-offset">Inbound</span>
+					</h2>
+					<div class="line-bar-graph">
+					</div><!-- .line-bar-graph -->
+					<div class="graph-summary">
+						<p class="single-metric incoming">
+							<span class="single-metric-value">100K</span>
+							<span class="single-metric-label">Mentions</span>
+						</p>
+						<p class="single-metric outgoing">
+							<span class="single-metric-value">100K</span>
+							<span class="single-metric-label">Retweets</span>
+						</p>
+						<p class="single-metric outgoing">
+							<span class="single-metric-value">100K</span>
+							<span class="single-metric-label">DMs</span>
+						</p>
+					</div><!-- .graph-summary -->
+				</div><!-- #twitter-volume-graph -->
+					<h2 class="subtitle">
+						<span class="subtitle-offset">Behavior</span>
+					</h2>
+					<h2 class="subtitle">
+						<span class="subtitle-offset">Outbound</span>
+					</h2>
+			</div><!-- .pillow-content -->
+		</section><!-- #twitter-breakdown -->
+		<section id="twitter-clicks" class="pillow">
+			<header class="pillow-header">
+				<h1 class="pillow-title">Clicks</h1>
+			</header><!-- .pillow-header -->
+			<div class="pillow-content">
+			</div><!-- .pillow-content -->
+		</section><!-- #twitter-clicks -->
+	</div><!-- #twitter-report -->
+	<div id="grid-report" class="report pillow">
+		<header class="pillow-header">
+			<h1 class="pillow-title">Deprecated Grid Demo</h1>
+		</header>
+		<div class="pillow-content">
+			<div class="group">
+				<div class="one-half"></div>
+				<div class="one-half"></div>
+			</div><!-- .group -->
+			<div class="group">
+				<div class="one-third"></div>
+				<div class="one-third"></div>
+				<div class="one-third"></div>
+			</div><!-- .group -->
+			<div class="group">
+				<div class="one-third"></div>
+				<div class="two-thirds"></div>
+			</div><!-- .group -->
+			<div class="group">
+				<div class="one-quarter"></div>
+				<div class="one-quarter"></div>
+				<div class="one-quarter"></div>
+				<div class="one-quarter"></div>
+			</div><!-- .group -->
+			<div class="group">
+				<div class="one-quarter"></div>
+				<div class="one-quarter"></div>
+				<div class="one-half"></div>
+			</div><!-- .group -->
+			<div class="group">
+				<div class="one-quarter"></div>
+				<div class="three-quarters"></div>
+			</div><!-- .group -->
+		</div><!-- .pillow-content -->
+	</div><!-- #grid -->
+	<div id="header"></div><!-- #header -->
+	<div id="left">
+		<a href="#overview">Overview</a>
+		<a href="#engagement">Engagement</a>
+		<a href="#audience">Audience</a>
+		<a href="#facebook">Facebook</a>
+		<a href="#twitter">Twitter</a>
+		<a href="#grid">Grid Demo</a>
+	</div><!-- #left -->
+	<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="reports.js"></script>
+</body>
+</html>

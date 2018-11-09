@@ -1,0 +1,54 @@
+<!doctype html>
+<html class="modal-open">
+<head>
+	<meta charset="utf-8">
+	<title>Modal</title>
+	<link rel="stylesheet" href="modal.css">
+</head>
+<body>
+	<div class="overlay">
+		<div class="modal standard">
+			<div class="modal-header">
+				<h1 class="heading">Header</h1>
+			</div>
+			<div class="modal-body">
+				<div class="content-stub"></div>
+			</div>
+			<div class="clear modal-footer">
+				<p class="modal-message">Message</p>
+				<div class="modal-actions">
+					<a class="secondary-link">Cancel</a>
+					<a class="primary-button">Submit</a>
+				</div>
+			</div>
+		</div>
+		<div class="modal stacked">
+			<div class="modal-header">
+				<h1 class="heading">Header</h1>
+			</div>
+			<div class="modal-body">
+				<div class="content-stub"></div>
+			</div>
+			<div class="clear modal-footer">
+				<p class="modal-message">Message</p>
+				<div class="modal-actions">
+					<a class="secondary-link">Cancel</a>
+					<a class="primary-button">Submit</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="demo">
+		<a data-target="standard">
+			<b>Standard Modal</b>
+			<span>Plain Jane.</span>
+		</a>
+		<a data-target="stacked">
+			<b>Stacked Modal</b>
+			<span>Tricky Dicky.</span>
+		</a>
+	</div>
+	<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="modal.js"></script>
+</body>
+</html>

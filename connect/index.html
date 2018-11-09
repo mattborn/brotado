@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Connect Dark</title>
+	<link rel="stylesheet" href="connect.css">
+</head>
+<body>
+	<div id="connect-test">
+		<nav id="add-test">
+			Add States
+			<a href="#twitter">Twitter</a>
+			<a href="#facebook">Facebook</a>
+			<a href="#personal">Personal</a>
+			<a href="#google">Google+</a>
+			<a href="#linkedin">LinkedIn</a>
+			<a href="#analytics">Analytics</a>
+			<a href="#reader">Reader</a>
+		</nav>
+		<nav id="success-test">
+			Success States
+			<a href="#twitter">Twitter</a>
+			<a href="#facebook">Facebook</a>
+			<a href="#personal">Personal</a>
+			<a href="#google">Google+</a>
+			<a href="#linkedin">LinkedIn</a>
+			<a href="#analytics">Analytics</a>
+			<a href="#reader">Reader</a>
+		</nav>
+		<nav id="custom-test">
+			Custom States
+			<a href="#limit">Limit Reached</a>
+			<a href="#facebook-select">Facebook Select</a>
+			<a href="#loading">Loading</a>
+		</nav>
+	</div><!-- #connect-test -->
+	<div id="connect" class="modal">
+		<div class="header group">
+			<h1 class="modal-title">Connect profile</h1>
+			<div class="group-select">
+				<span class="in-group">in group</span>
+				<a class="select" href="#">Sprout Social Team</a>
+			</div><!-- .group-select -->
+		</div><!-- .header -->
+		<nav id="connect-networks" class="networks group">
+			<a class="network twitter" href="#">Twitter</a>
+			<a class="network facebook personal" href="#">Facebook</a>
+			<a class="network google" href="#">Google+</a>
+			<a class="network linkedin" href="#">LinkedIn</a>
+			<a class="network analytics" href="#">Google Analytics</a>
+			<a class="network reader" href="#">Google Reader</a>
+		</nav>
+		<div id="connect-content" class="content">
+			<div id="default" class="default stub">
+				<h1 class="stub-title">Choose a Network to Add a New Profile</h1>
+				<p class="stub-text">Sprout will begin gathering data for your profiles as soon as they are attached.</p>
+			</div><!-- #default -->
+			<div id="limit" class="limit stub">
+				<h1 class="stub-title">Profile Limit Reached</h1>
+				<p class="stub-text">You’ll need to <a class="inline-link" href="#">upgrade your plan</a> or remove a profile in order to connect a new one.</p>
+			</div><!-- #default -->
+			<div id="twitter-add" class="twitter add stub">
+				<h1 class="stub-title">Add a Twitter Profile</h1>
+				<p class="stub-text">Please make sure you are logged in with the proper account when you authorize Sprout.</p>
+				<img alt="twitter-add-image" src="images/twitter-double-check.gif">
+			</div><!-- #twitter-add -->
+			<div id="facebook-add" class="facebook add stub">
+				<h1 class="stub-title">Add a Facebook Page</h1>
+				<p class="stub-text">Make sure you are logged in to Facebook as an Administrator to authorize Sprout, then you can choose the specific pages to connect.</p>
+				<a class="inline-link personal" href="#">Setup a Personal profile instead</a>
+			</div><!-- #facebook-add -->
+			<div id="personal-add" class="personal add stub">
+				<h1 class="stub-title">Add a Personal Facebook Profile</h1>
+				<p class="stub-text">Add your profile to monitor incoming messages and share status updates. Reporting is not available for Personal Facebook profiles.</p>
+				<a class="inline-link facebook" href="#">Setup a Facebook Page instead</a>
+			</div><!-- #personal-add -->
+			<div id="google-add" class="google add stub">
+				<h1 class="stub-title">Add a Google Profile</h1>
+				<p class="stub-text">Please make sure you are logged in with the proper account when you authorize Sprout.</p>
+			</div><!-- #google-add -->
+			<div id="linkedin-add" class="linkedin add stub">
+				<h1 class="stub-title">Connect your Personal LinkedIn</h1>
+				<p class="stub-text">Grant access to your profile to share updates and view your feed.</p>
+			</div><!-- #linkedin-add -->
+			<div id="analytics-add" class="analytics add stub">
+				<h1 class="stub-title">Connect Google Analytics</h1>
+				<p class="stub-text">Add your Google Analytics account to see how your website traffic correlates with your social media activity.</p>
+			</div><!-- #analytics-add -->
+			<div id="reader-add" class="reader add stub">
+				<h1 class="stub-title">Connect Google Reader</h1>
+				<p class="stub-text">Setup your Google Reader and view it from all of your groups. Each user will be able to setup their own account.</p>
+			</div><!-- #reader-add -->
+			<div id="twitter-success" class="twitter success stub">
+				<p class="stub-profile">
+					<span class="stub-check">√</span>
+					<img class="stub-avatar" alt="" src="">
+					<span class="stub-username">@Oatmeal</span>
+				</p>
+				<h1 class="stub-connected">{{this-profile}} is now connected to {{this-group}}</h1>
+				<p class="stub-text">Click "Done" to return to Sprout, or connect another profile using the network icons above.</p>
+			</div><!-- #twitter-success -->
+			<div id="facebook-success" class="facebook success stub">
+				<p class="stub-profile">
+					<span class="stub-check">√</span>
+					<img class="stub-avatar" alt="" src="">
+					<span class="stub-username">Success!</span>
+				</p>
+				<h1 class="stub-connected">{{integer}} page{{s are}} now connected to {{this-group}}</h1>
+				<p class="stub-text">Click "Done" to return to Sprout, or connect another profile using the network icons above.</p>
+			</div><!-- #facebook-success -->
+			<div id="personal-success" class="facebook success stub">
+				<p class="stub-profile">
+					<span class="stub-check">√</span>
+					<img class="stub-avatar" alt="" src="">
+					<span class="stub-username">Success!</span>
+				</p>
+				<h1 class="stub-connected">{{this-profile}} is now connected to {{this-group}}</h1>
+				<p class="stub-text">Click "Done" to return to Sprout, or connect another profile using the network icons above.</p>
+			</div><!-- #personal-success -->
+			<div id="google-success" class="google success stub">
+				<p class="stub-profile">
+					<span class="stub-check">√</span>
+					<img class="stub-avatar" alt="" src="">
+					<span class="stub-username">Success!</span>
+				</p>
+				<h1 class="stub-connected">{{this-profile}} is now connected to {{this-group}}</h1>
+				<p class="stub-text">Click "Done" to return to Sprout, or connect another profile using the network icons above.</p>
+			</div><!-- #google-success -->
+			<div id="linkedin-success" class="linkedin success stub">
+				<p class="stub-profile">
+					<span class="stub-check">√</span>
+					<img class="stub-avatar" alt="" src="">
+					<span class="stub-username">Success!</span>
+				</p>
+				<h1 class="stub-connected">{{this-profile}} is now connected to {{this-group}}</h1>
+				<p class="stub-text">Click "Done" to return to Sprout, or connect another profile using the network icons above.</p>
+			</div><!-- #linkedin-success -->
+			<div id="analytics-success" class="analytics success stub">
+				<p class="stub-profile">
+					<span class="stub-check">√</span>
+					<img class="stub-avatar" alt="" src="">
+					<span class="stub-username">Success!</span>
+				</p>
+				<h1 class="stub-connected">{{this-profile}} is now connected to {{this-group}}</h1>
+				<p class="stub-text">Click "Done" to return to Sprout, or connect another profile using the network icons above.</p>
+			</div><!-- #analytics-success -->
+			<div id="reader-success" class="reader success stub">
+				<p class="stub-profile">
+					<span class="stub-check">√</span>
+					<span class="stub-username">Success!</span>
+				</p>
+				<h1 class="stub-connected">Google Reader is connected to your account</h1>
+				<p class="reader-options">
+					<a class="inline-link" href="#">Change Account</a> <span class="or">or</span>
+					<a class="inline-link" href="#">Disconnect</a>
+				</p>
+				<p class="stub-text">Click "Done" to return to Sprout, or connect another profile using the network icons above.</p>
+			</div><!-- #reader-success -->
+		</div><!-- .content -->
+		<div class="footer group">
+			<p class="status">You can add up to {{integer}} new profiles</p>
+			<div class="actions">
+				<a class="cancel" href="#">Cancel</a>
+				<span class="or">or</span>
+				<a class="button proceed" href="#">Proceed</a>
+				<a class="button done" href="#">Done</a>
+			</div><!-- .actions -->
+		</div><!-- .footer -->
+		<div class="loading"></div><!-- .loading -->
+	</div><!-- #connect -->
+	<div id="connect-choose" class="modal">
+		<div class="header group">
+			<h1 class="modal-title">Choose pages to connect</h1>
+			<div class="group-select">
+				<span class="in-group">in group</span>
+				<a class="select" href="#">Sprout Social Team</a>
+			</div><!-- .group-select -->
+		</div><!-- .header -->
+		<div class="content"></div><!-- .content -->
+		<div class="footer group">
+			<p class="status">Logged into Facebook as {{this-person}} <a class="inline-link" href="#">change</a></p>
+			<div class="actions">
+				<a class="cancel" href="#">Cancel</a>
+				<span class="or">or</span>
+				<a class="button connect" href="#">Connect</a>
+			</div><!-- .actions -->
+		</div><!-- .footer -->
+	</div><!-- #connect-choose -->
+	<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="connect.js"></script>
+</body>
+</html>

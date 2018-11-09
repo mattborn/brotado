@@ -1,0 +1,121 @@
+
+.report {
+	font: bold 100%/1 'Proxima Nova', 'Helvetica Neue', sans-serif;
+}
+
+/*  Pillows  */
+
+.pillow {
+	background: #fff;
+	background-image: linear-gradient(bottom, #eee, #fff 40px);
+	border-radius: 5px;
+	box-shadow: 0 1px 2px rgba(0,0,0,.1);
+	margin: 0 0 20px;
+	padding: 20px 20px 30px;
+	position: relative;
+}
+.pillow-header { margin: 0 0 20px; }
+.pillow-title {
+	font: normal 26px 'Proxima Nova Condensed';
+	text-transform: uppercase;
+}
+.pillow-content { margin: 0 -20px -20px 0; }
+
+/*  Layout  */
+
+.layout { float: left; margin: 0 20px 20px 0; }
+.one-half { width: 400px; }
+.one-third { width: 260px; }
+.two-thirds { width: 540px; }
+.one-quarter { width: 190px; }
+.three-quarters { width: 610px; }
+
+.single-metric,
+.graph-summary,
+.line-graph,
+.bar-graph,
+.line-bar-graph,
+.mirror-bar-graph,
+.day-week-graph,
+.hairline-graph,
+.horizontal-graph,
+.donut-graph { .layout; }
+
+.allocation-graph { margin: 0 20px 20px 0; }
+
+.donut-graph,
+.hairline-graph,
+.horizontal-graph { .one-half; }
+.single-metric,
+.graph-summary,
+.day-week-graph { .one-quarter; }
+.line-graph,
+.bar-graph,
+.line-bar-graph,
+.mirror-bar-graph { .three-quarters; }
+
+/*  Common  */
+
+.report-header { height: 50px; }
+
+.single-metric { padding-left: 20px; }
+
+.line-graph,
+.bar-graph,
+.line-bar-graph,
+.mirror-bar-graph { min-height: 180px; padding-left: 20px; }
+
+.single-metric {
+	font-weight: bold;
+	text-transform: uppercase;
+
+	&-value { font-size: 48px; }
+	&-unit { font-size: 24px; }
+	&-label { display: block; letter-spacing: 1px; }
+}
+
+.inline-metric { text-align: center; }
+
+.subtitle {
+	border-bottom: 1px solid #ddd;
+	font-size: 13px;
+	letter-spacing: 1px;
+	line-height: 20px;
+	margin: 0 20px 30px 0;
+	text-align: center;
+	text-transform: uppercase;
+
+	&-offset {
+		background: #fff;
+		padding: 0 10px;
+		position: relative;
+		top: 11px;
+	}
+}
+
+/*  Engagement  */
+
+#engagement-report .report-header { }
+
+.rate { color: #f06; }
+.volume { color: #bbb; }
+
+#response-rate-hour-rate,
+#response-rate-hour-time,
+#facebook-age,
+#facebook-gender,
+#twitter-age,
+#twitter-gender { .layout; .one-half; }
+
+#facebook-impressions-age-gender,
+#facebook-impressions-location,
+#facebook-sharing-age-gender,
+#facebook-sharing-location { float: left; width: 420px; }
+
+/*  Facebook  */
+
+#facebook-summary-metrics {
+	.single-metric { border-right: 1px solid #ddd; }
+	.single-metric:nth-child(4) { border: 0; }
+}
+

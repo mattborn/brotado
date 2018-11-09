@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Radios + Checkboxes</title>
+		<link rel="stylesheet" href="radios-and-checkboxes.css">
+	</head>
+	<body>
+		<div class="process">
+			<h1>Radios and Checkboxes</h1>
+			<h2>Requirements</h2>
+			<ul>
+				<li>no images</li>
+				<li>20px x 20px</li>
+				<li>custom focus state</li>
+				<li>contrast tested on Sundeep’s monitor</li>
+			</ul>
+			<h2>Pass 1</h2>
+			<p>Using only a class on the input element with <code>appearance: none</code></p>
+			<div class="example">
+				<input type="radio" class="radio-1" name="pass-1">
+				<input type="radio" class="radio-1" name="pass-1">
+				<input type="checkbox" class="checkbox-1">
+			</div>
+			<h3>Result</h3>
+			<ul>
+				<li>works perfectly in webkit</li>
+				<li>does not work in IE9</li>
+				<li>scales to half size in FF23</li>
+			</ul>
+			<h2>Pass 2</h2>
+			<p>Hiding element while using label + span for styling</p>
+			<div class="example">
+				<div class="radios">
+					<input type="radio" class="radio-2" id="radio-2-1" name="pass-2" checked>
+					<label class="radio-label" for="radio-2-1">
+						<span class="radio-visible"></span>
+						<span class="radio-label-text">Selected</span>
+					</label>
+					<input type="radio" class="radio-2" id="radio-2-2" name="pass-2">
+					<label class="radio-label" for="radio-2-2">
+						<span class="radio-visible"></span>
+						<span class="radio-label-text">Unselected</span>
+					</label>
+					<input type="radio" class="radio-2" id="radio-2-3" name="pass-2" disabled>
+					<label class="radio-label" for="radio-2-3">
+						<span class="radio-visible"></span>
+						<span class="radio-label-text">Disabled</span>
+					</label>
+					<input type="radio" class="radio-2 no-access" id="radio-2-4" checked>
+					<label class="radio-label" for="radio-2-4">
+						<span class="radio-visible"></span>
+						<span class="radio-label-text">No Access</span>
+					</label>
+				</div>
+				
+				<div class="checkboxes">
+					<input type="checkbox" class="checkbox-2" id="checkbox-2-1" checked>
+					<label class="checkbox-label" for="checkbox-2-1">
+						<span class="checkbox-visible"></span>
+						<span class="checkbox-label-text">Checked</span>
+					</label>
+					<input type="checkbox" class="checkbox-2" id="checkbox-2-2">
+					<label class="checkbox-label" for="checkbox-2-2">
+						<span class="checkbox-visible"></span>
+						<span class="checkbox-label-text">Unchecked</span>
+					</label>
+					<input type="checkbox" class="checkbox-2" id="checkbox-2-3" disabled>
+					<label class="checkbox-label" for="checkbox-2-3">
+						<span class="checkbox-visible"></span>
+						<span class="checkbox-label-text">Disabled</span>
+					</label>
+				</div>
+			</div>
+			<h3>Result</h3>
+			<ul>
+				<li>tested + working in Webkit, FF23+ and IE9+</li>
+				<li>focus state depends on non-hidden input</li>
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Mobile</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="mobile.css">
+</head>
+<body>
+	<div class="mobile-intro">
+		<div class="mobile-welcome">
+			<div class="mobile-welcome-header">
+				<h1 class="mobile-welcome-title">Welcome to Sprout Social</h1>
+				<p class="mobile-welcome-subtitle">Getting Started</p>
+			</div>
+			<div class="mobile-welcome-body">
+				<p class="mobile-welcome-label">Help us tailor your experience by entering your business type.</p>
+				<div class="mobile-welcome-type">
+					<p class="mobile-welcome-error">
+						<span class="mobile-welcome-error-arrow">➼</span>
+						<span class="mobile-welcome-error-text">Please select a business type</span>
+					</p>
+					<select class="mobile-welcome-select">
+						<option>Please select a business type</option>
+						<option>Kai, add biztypes here</option>
+					</select>
+				</div>
+				<p class="mobile-welcome-label">Business Name</p>
+				<p class="mobile-welcome-error">➼ Please enter a business name</p>
+				<input class="mobile-welcome-input" placeholder="Enter your business name">
+				<p class="mobile-welcome-p">We will begin searching social networks, blogs, etc. for mentions of your business.</p>
+				<p class="mobile-welcome-label">What’s your timezone?</p>
+				<div class="mobile-welcome-timezone">
+					<select class="mobile-welcome-select">
+						<option>(UTC -6) Central Time (US &amp; Canada)</option>
+						<option>Kai, add timezones here</option>
+					</select>
+				</div>
+				<div class="mobile-welcome-footer">
+					<a class="mobile-welcome-submit js-flip">
+						<span class="mobile-welcome-submit-label">Continue</span>
+						<div class="mobile-welcome-submit-spinner"></div></a>
+				</div>
+			</div>
+		</div>
+		<div class="mobile-direction">
+			<div class="mobile-direction-header">
+				<h1 class="mobile-direction-title">It’s time.</h1>
+				<p class="mobile-direction-p">Grab the iPhone app and stay on top of your social, on the go.</p>
+			</div>
+			<img class="mobile-direction-icon" src="https://pbs.twimg.com/profile_images/378800000149656937/3a06928e0b3c0f9671c71559e4f8d5a9_reasonably_small.png">
+			<div class="mobile-direction-footer">
+				<a class="mobile-direction-submit" href="//itunes.apple.com/us/app/sprout-social/id475307859">Get the app</a><br>
+				<a class="mobile-direction-web" href="//sproutsocial.com/dashboard">Not now</a>
+			</div>
+		</div>
+	</div>
+	<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="../bower_components/spin.js/spin.js"></script>
+	<script src="mobile.js"></script>
+</body>
+</html>

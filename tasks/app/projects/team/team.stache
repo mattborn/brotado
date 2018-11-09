@@ -1,0 +1,75 @@
+<div id="main" role="main">
+  <div id="team-report">
+    <header class="report-header group">
+      <div class="group">
+        <div class="report-header-left">
+          <h1 class="report-header-title">Team Report</h1>
+          <input class="report-date" value="Feb 18, 2013 &ndash; Mar 18, 2013">
+        </div><!-- .report-header-left -->
+      </div><!-- .group -->
+    </header><!-- .report-header -->
+    <div id="team-publishing" class="pillow">
+      <h2 class="small-title">Publishing, by Team Member</h2>
+{{#publishing}}
+      <div class="publishing-item group">
+        <img class="publishing-item-avatar" alt="{{name}}" src="https://si0.twimg.com/profile_images/{{avatar}}">
+        <div class="publishing-item-meta group">
+          <div class="left">
+            <span class="publishing-item-name">{{name}}</span>
+            <span class="publishing-item-average">
+              <span class="value">{{average}}{{^average}}---{{/average}}</span>
+              <span class="label">Daily avg</span>
+            </span>
+          </div><!-- .left -->
+          <div class="right">
+            <span class="publishing-item-replies">
+              <span class="value">{{replies}}{{^replies}}---{{/replies}}</span>
+              <span class="label">Replies</span>
+              <span class="slash">/</span>
+            </span>
+            <span class="publishing-item-total">
+              <span class="value">{{total}}{{^total}}---{{/total}}</span>
+              <span class="label">Total Posts</span>
+            </span>
+          </div><!-- .right -->
+        </div><!-- .publishing-item-meta -->
+        <div class="publishing-item-bar-graph"></div>
+      </div><!-- .publishing-item -->
+{{/publishing}}
+    </div><!-- #team-publishing -->
+    <div id="team-tasks" class="pillow">
+      <table class="team-tasks-table">
+        <tr>
+          <th><h2 class="small-title">Tasks, by Team Member</h2></th>
+          <th>First Response</th>
+          <th>Task Resolution</th>
+          <th>Assigned</th>
+          <th>Completed</th>
+          <th>Completion Ratio ^</th>
+        </tr>
+{{#tasks}}
+        <tr class="task-item">
+          <td>
+            <img class="task-item-avatar" alt="{{name}}" src="https://si0.twimg.com/profile_images/{{avatar}}">
+            <span class="task-item-name">{{name}}</span>
+            <span class="task-item-role">{{role}}</span>
+          </td>
+          <td class="task-item-response">{{response}}{{^response}}---{{/response}} min</td>
+          <td class="task-item-resolution">{{resolution}}{{^resolution}}---{{/resolution}} min</td>
+          <td class="task-item-assigned">{{assigned}}{{^assigned}}---{{/assigned}}</td>
+          <td class="task-item-completed">{{completed}}{{^completed}}---{{/completed}}</td>
+          <td class="task-item-ratio">
+            <span class="value">{{ratio}}{{^ratio}}---{{/ratio}}%</span>
+            <div class="task-item-bar-graph"></div>
+          </td>
+        </tr>
+{{/tasks}}
+      </table>
+    </div><!-- #team-tasks -->
+  </div><!-- #team-report -->
+</div><!-- #main -->
+<div id="side" role="complementary">
+  <nav class="pillow" role="navigation">
+    <a href="/reports/team">Team Report</a>
+  </nav><!-- .pillow -->
+</div><!-- #side -->

@@ -1,0 +1,148 @@
+@import '../shared.css';
+
+.content { padding: 120px 0 30px; }
+
+.twitter-reply-side { /* make:mixin */
+	width: 440px; height: 100%;
+	box-sizing: border-box;
+	padding: 120px 0 30px;
+	position: fixed;
+	top: 0;
+}
+
+/*  Twitter Reply  */
+
+.twitter-reply-reply { background: #eee; border-bottom: 1px solid #ddd; }
+.twitter-reply-header {
+	background: #eee;
+	color: #999;
+	box-sizing: border-box;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	line-height: 10px;
+	padding: 20px;
+	text-transform: uppercase;
+}
+.twitter-reply-title { font-size: 100%; }
+.twitter-reply-title-blue { color: #16a; }
+.twitter-reply-border { border: 1px solid #ccc; margin: 0 20px; }
+.reply-profile { padding: 10px 0 10px 60px; position: relative; }
+.reply-profile-avatar {
+	width: 50px; height: 50px;
+	position: absolute;
+	top: 0; left: 0;
+}
+.reply-profile-name {
+	font-weight: bold;
+	margin-bottom: 4px;
+	text-transform: uppercase;
+}
+.reply-profile-handle {
+	color: #999;
+	font-size: 12px;
+	padding-left: 17px;
+}
+.reply-profile-handle .twitter-icon {
+	width: 12px; height: 12px;
+	border-radius: 6px;
+	bottom: 10px; left: 60px;
+}
+.twitter-reply-text {
+	width: 100%; height: 120px;
+	border: 0;
+	box-sizing: border-box;
+	color: #555;
+	font: inherit;
+	font-size: 20px;
+	line-height: 1.2;
+	padding: 20px;
+	resize: none;
+	vertical-align: bottom;
+}
+.twitter-reply-footer { line-height: 30px; padding: 20px; }
+.twitter-reply-attach { color: #16a; text-transform: lowercase; }
+.twitter-reply-send-button {
+	width: 100px;
+	background: #16a;
+	border-radius: 5px;
+	color: #fff;
+	float: right;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	line-height: 30px;
+	padding: 0 20px;
+	text-align: center;
+	text-transform: uppercase;
+}
+.twitter-reply-send-button:hover { background: #2976b3; }
+
+/*  Recent History  */
+
+.recent-history { border-bottom: 1px solid #ddd; position: relative; }
+.recent-history:after {
+	width: 14px; height: 14px;
+	background: #fff;
+	border: 0 solid #ddd;
+	border-width: 1px 0 0 1px;
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: -8px; left: 37px;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.recent-history-header { padding: 20px; }
+.recent-history-header:after { clear: both; content: ''; display: table; }
+.recent-history-title {
+	color: #bbb;
+	float: left;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	line-height: 10px;
+	text-transform: uppercase;
+}
+.recent-history-actions {
+	float: right;
+	font-size: 12px;
+	text-transform: lowercase;
+}
+.recent-history-follow,
+.recent-history-view-full { color: #16a; margin-left: 5px; }
+.history-profile { padding: 0 20px 20px 80px; position: relative; }
+.history-profile-avatar {
+	width: 50px; height: 50px;
+	position: absolute;
+	top: 0; left: 20px;
+}
+.history-profile-who { margin-bottom: 5px; }
+.history-profile-name {}
+.history-profile-handle {}
+.twitter-icon {}
+.history-profile-about { line-height: 1.2; margin-bottom: 10px; }
+.history-profile-where { color: #bbb; font-size: 12px; }
+.history-profile-city { margin-right: 10px; }
+.history-profile-site {}
+
+/*  Copied from Twitter Convo  */
+
+.side-message {
+	border-bottom: 2px solid #eee;
+	margin: 0 20px;
+	padding: 20px 0 20px 70px;
+	position: relative;
+}
+.side-message-avatar {
+	width: 50px; height: 50px;
+	position: absolute;
+	top: 20px; left: 0;
+}
+.side-message-text { font-size: 16px; line-height: 20px; margin-bottom: 10px; }
+.side-message-name { color: #16a; margin-right: 5px; }
+.side-message-when { color: #bbb; }
+
+/*  Adjustment of base styles  */
+
+.side-content:hover .side-overflow { margin-right: -6px; overflow-y: auto; }

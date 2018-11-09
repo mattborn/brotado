@@ -1,0 +1,27 @@
+@import '../shared.css';
+
+html { background: linear-gradient(to bottom, #fff, #eee); }
+body { -webkit-perspective: 600px; }
+
+@-webkit-keyframes spin {
+	from { -webkit-transform: rotateX(0deg) rotateY(0deg); }
+	to { -webkit-transform: rotateY(360deg); }
+}
+
+.seven {
+	width: 144px; height: 144px;
+	background: url(seven.png);
+	border-radius: 5px;
+	margin: -72px 0 0 -72px;
+	position: absolute;
+	top: 50%; left: 50%;
+	-webkit-animation: spin 8s infinite;
+	-webkit-transform-style: preserve-3d;
+}
+.seven:after {
+	width: 144px; height: 1px;
+	box-shadow: 0 10px 20px rgba(0,0,0,.6);
+	content: '';
+	position: absolute;
+	bottom: -30px;
+}

@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Button Spinner</title>
+		<link rel="stylesheet" href="button-spinner.css">
+	</head>
+	<body>
+		<div class="sprout process">
+			<h1>Button Spinner</h1>
+			<h2>Requirements</h2>
+			<ul>
+				<li>primary button</li>
+				<li>on click, switch to centered spinner</li>
+			</ul>
+			<h2>Pass 1</h2>
+			<p>Borrowing from <a class="inline-link" href="//lab.hakim.se/ladda">Ladda zoom-out</a> + using <a class="inline-link" href="//fgnass.github.io/spin.js/">spin.js</a></p>
+			<div class="example">
+				<a class="primary-button pass-1">
+					<span class="button-text">Continue</span>
+					<span class="button-spin"></span>
+				</a>
+			</div>
+			<h3>Result</h3>
+			<ul>
+				<li>web team doesn’t like extra divs + additional library</li>
+			</ul>
+			<h2>Pass 2</h2>
+			<p>Using similar approach, but swapping spin.js with a few different .gif options</p>
+			<div class="example">
+				<a class="primary-button pass-2">
+					<span class="button-text">Spinner 1</span>
+					<span class="button-spin spinner-1"></span>
+				</a>
+				<a class="primary-button pass-2">
+					<span class="button-text">Spinner 2</span>
+					<span class="button-spin spinner-2"></span>
+				</a>
+				<a class="primary-button pass-2">
+					<span class="button-text">Spinner 3</span>
+					<span class="button-spin spinner-3"></span>
+				</a>
+			</div>
+			<h3>Result</h3>
+			<ul>
+				<li>tested + working in Webkit, FF23+ and IE9+</li>
+				<li>no way to animate zoom due to background color on .gif</li>
+				<li>Gil says we’re going with Spinner 2</li>
+			</ul>
+		</div>
+		<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="../bower_components/spin.js/spin.js"></script>
+		<script src="button-spinner.js"></script>
+	</body>
+</html>

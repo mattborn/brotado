@@ -1,0 +1,120 @@
+@import '../shared.css';
+
+/*  Process  */
+
+.process { width: 800px; margin: 0 auto; padding: 50px; }
+.sprout { color: #4d4d4d; font-size: 14px; }
+
+h1,
+h2,
+h3 { margin: 1.5em 0 .75em; }
+
+p { margin: 0; }
+
+ul { margin-bottom: 30px; }
+.doc-ul li { line-height: 1.5; }
+
+code { background: #fff; margin: 0 -2px; padding: 4px; }
+
+.example { margin-bottom: 30px; padding: 30px; }
+
+.inline-link { color: #1d67a7; text-decoration: none; }
+.inline-link:hover { text-decoration: underline; }
+.inline-link:visited { color: #164d7d; }
+
+.heading { letter-spacing: .1em; text-transform: uppercase; }
+
+.base-profile { padding: 10px; position: relative; }
+.base-profile:after { clear: both; content: ''; display: table; }
+
+.profile-img { width: 40px; height: 40px; float: left; margin-right: 10px; }
+.profile-b { display: block; line-height: 20px; margin-top: 2px; }
+.profile-span { color: #999; font-size: 12px; }
+.profile-link { line-height: 20px; text-transform: lowercase; }
+
+.zebra-tr:nth-child(even) { background: #fff; }
+.zebra-th,
+.zebra-td { padding: 10px; text-align: center; }
+.zebra-th:first-child,
+.zebra-td:first-child { text-align: left; }
+
+.standard .zebra-tr { cursor: pointer; }
+.standard .zebra-tr:hover { background: #ddd; }
+.standard .zebra-th,
+.standard .zebra-td { padding: 10px 0; }
+.standard .zebra-th:first-child,
+.standard .zebra-td:first-child { padding: 10px; }
+
+.select-column {
+	border-bottom: 1px dotted #808080;
+	color: #808080;
+	font: 12px 'proxima nova condensed', 'Helvetica Neue', Arial, sans-serif;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+}
+.select-column:hover { color: #4d4d4d; }
+
+.radio,
+.checkbox { opacity: .5; position: absolute; }
+.radio-visible,
+.checkbox-visible {
+	width: 22px; height: 22px;
+	background: #fff;
+	border: 2px solid #f7f7f7;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.3);
+	cursor: pointer;
+	display: inline-block;
+	margin: 0 5px 0 0;
+	position: relative;
+	vertical-align: middle;
+}
+.radio-label-text,
+.checkbox-label-text { vertical-align: middle; }
+.radio:focus + .radio-label .radio-visible,
+.checkbox:focus + .checkbox-label .checkbox-visible {
+	border-color: #7ac143;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.3), 0 0 5px #7ac143;
+}
+.radio:disabled + .radio-label .radio-visible,
+.checkbox:disabled + .checkbox-label .checkbox-visible { background: #eee; }
+.radio:disabled + .radio-label .radio-label-text,
+.checkbox:disabled + .checkbox-label .checkbox-label-text { color: #bbb; }
+
+.radio-visible { border-radius: 50%; }
+.radio:checked + .radio-label .radio-visible:after {
+	width: 6px; height: 6px;
+	background: #4d4d4d;
+	border-radius: 4px;
+	content: '';
+	position: absolute;
+	left: 6px; top: 6px;
+}
+
+.no-access:checked + .radio-label .radio-visible:after {
+	width: 8px; height: 5px;
+	background: #f44;
+	border-radius: 0;
+	top: 7px; left: 5px;
+}
+
+.checkbox-visible { border-radius: 3px; }
+.checkbox:checked + .checkbox-label .checkbox-visible:after {
+	width: 4px; height: 10px;
+	border: 0 solid #4d4d4d;
+	border-width: 0 3px 3px 0;
+	content: '';
+	position: absolute;
+	top: 2px; left: 6px;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+/*  Pass 1  */
+
+.profiles .zebra-table { margin-bottom: 30px; }
+.profiles .zebra-th,
+.profiles .zebra-td { text-align: center; }
+.profiles .zebra-th:first-child,
+.profiles .zebra-td:first-child { text-align: left; }
+.profiles .heading { color: #808080; }

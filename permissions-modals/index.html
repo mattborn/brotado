@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Permissions</title>
+	<link rel="stylesheet" href="permissions.css">
+</head>
+<body>
+	<div class="content">
+		<div class="center">
+			<div class="settings" role="complementary">
+				<h1 class="settings-name">Matthew Born</h1>
+				<a class="settings-link">Personal Settings</a>
+				<a class="settings-link">Business Settings</a>
+				<a class="settings-link selected">Users &amp; Social Profiles</a>
+				<a class="settings-link">Helpdesk Integration</a>
+				<a class="settings-link">Sprout Queue</a>
+				<a class="settings-link">Billing</a>
+				<a class="settings-link">Utilities &amp; Goodies</a>
+			</div>
+			<div class="permissions" role="main">
+				<div class="people"></div>
+				<div class="profiles"></div>
+			</div>
+		</div>
+	</div>
+	<div class="header js-header">
+		<div class="panels js-panels">
+			<div class="center">
+				<div class="search-panel js-search">
+					<form class="search-panel-form">
+						<input class="search-panel-query twitter" placeholder="Search Twitter" required>
+					</form>
+					<div class="change-network">
+						<a class="search-twitter selected" data-network="Twitter">Twitter</a>
+						<a class="search-google" data-network="Google">Google+</a>
+						<a class="search-facebook" data-network="Facebook">Facebook</a>
+					</div>
+				</div>
+				<div class="contacts-panel js-contacts">
+					<input class="contacts-panel-query" placeholder="Search Contacts">
+				</div>
+				<div class="compose-panel js-compose">
+					<textarea class="compose-panel-message" placeholder="Write a message"></textarea>
+				</div>
+			</div>
+		</div>
+		<div class="master js-master">
+			<div class="center">
+				<p class="master-text">This is a message from Justyn, CEO of Sprout Social. <a class="master-more">Read more</a></p>
+			</div>
+			<i class="close-icon js-close"></i>
+		</div>
+		<div class="utility">
+			<div class="center">
+				<div class="utility-right">
+					<i class="connect-icon"></i>
+					<i class="invite-icon"></i>
+				</div>
+			</div>
+		</div>
+		<div class="primary">
+			<div class="center">
+				<h1 class="primary-brand">
+					<a class="primary-brand-link" data-target="dashboard" href="/">
+						<span class="primary-brand-sprout">Sprout</span>
+						<span class="primary-brand-social">Social</span>
+					</a>
+				</h1>
+				<div class="primary-routes">
+					<a class="primary-route" data-target="inbox">Inbox</a>
+					<a class="primary-route" data-target="tasks">Tasks</a>
+					<a class="primary-route" data-target="feeds">Feeds</a>
+					<a class="primary-route" data-target="publishing">Publishing</a>
+					<a class="primary-route" data-target="discovery">Discovery</a>
+					<a class="primary-route" data-target="reports">Reports</a>
+				</div>
+				<div class="primary-panels">
+					<a class="primary-panel primary-search js-toggle-search">
+						<i class="search-icon"></i>
+					</a>
+					<a class="primary-panel primary-contacts js-toggle-contacts">
+						<i class="contacts-icon"></i>
+					</a>
+					<a class="primary-panel primary-compose js-toggle-compose">New Message</a>
+				</div>
+			</div>
+		</div>
+		<div class="shout js-shout">
+			<p class="shout-text shout-trial-14">There are 14 days remaining in your trial. <a class="shout-action">★ Upgrade now</a></p>
+			<p class="shout-text shout-trial-3">There are 3 days remaining in your trial. <a class="shout-action">❤ Let's make it official!</a></p>
+			<p class="shout-text shout-error">The web app has died! Game over. <a class="shout-action">↻ Try again</a></p>
+			<i class="close-icon js-close"></i>
+		</div>
+	</div>
+<div class="modal">
+	<div class="tallboy connect">
+		<div class="modal-header">
+			<h1 class="modal-title">Connect a Profile</h1>
+			<select class="group-select-stub">
+				<option>Sprout Social Team</option>
+			</select>
+		</div>
+		<div class="connect-list">
+			<a class="connect-item connect-item-twitter" data-target="twitter">
+				<i class="connect-item-icon twitter-icon-407"></i>
+				<span class="connect-item-label">Twitter</span>
+			</a>
+			<a class="connect-item connect-item-facebook" data-target="facebook">
+				<i class="connect-item-icon facebook-icon-407"></i>
+				<span class="connect-item-label">Facebook</span>
+			</a>
+			<a class="connect-item connect-item-google" data-target="google">
+				<i class="connect-item-icon google-icon-407"></i>
+				<span class="connect-item-label">Google+</span>
+			</a>
+			<a class="connect-item connect-item-linkedin" data-target="linkedin">
+				<i class="connect-item-icon linkedin-icon-407"></i>
+				<span class="connect-item-label">LinkedIn</span>
+			</a>
+			<a class="connect-item connect-item-analytics" data-target="analytics">
+				<i class="connect-item-icon analytics-icon-407"></i>
+				<span class="connect-item-label">Analytics</span>
+			</a>
+			<a class="connect-item connect-item-feedly" data-target="feedly">
+				<i class="connect-item-icon feedly-icon-407"></i>
+				<span class="connect-item-label">Feedly</span>
+			</a>
+		</div>
+		<p class="error connect-form-error">An error occurred. Sorry this wasn't more helpful.</p>
+		<div class="connect-view connect-choose">
+			<img alt="Dashed Leaders" src="connect-arrows.png">
+			<h2 class="connect-title">Choose a Network to<br> Add a New Profile</h2>
+			<p class="connect-instructions">Sprout will begin gathering data for your<br> profiles as soon as they are attached.</p>
+		</div>
+		<div class="connect-view connect-twitter">
+			<h2 class="connect-title">Add a Twitter Profile</h2>
+			<p class="connect-instructions">Make sure you are signed in with the right<br> account when you authorize Sprout.</p>
+			<img class="connect-image" alt="Twitter Auth" src="connect-twitter.png">
+			<a class="connect-action" data-target="finish-twitter">Go to Twitter Authorization &rarr;</a>
+		</div>
+		<div class="connect-view connect-facebook">
+			<h2 class="connect-title">Add a Facebook Page</h2>
+			<p class="connect-instructions">Make sure you are signed in as a page administrator, and please authorize all requested permissions so you can select specific pages to manage in Sprout.</p>
+			<a class="connect-link" data-target="personal">Connect a personal Facebook profile instead</a>
+			<img class="connect-image" alt="Twitter Auth" src="connect-facebook.png">
+			<a class="connect-action" data-target="facebook-pages">Go to Facebook Authorization &rarr;</a>
+		</div>
+		<div class="connect-view connect-personal">
+			<h2 class="connect-title">Add a Personal Facebook Profile</h2>
+			<p class="connect-instructions">Add your personal Facebook profile to monitor activity and share status updates. Reporting is not available for personal Facebook profiles.</p>
+			<a class="connect-link" data-target="facebook">Connect a Facebook page instead</a>
+			<img class="connect-image" alt="Twitter Auth" src="connect-facebook.png">
+			<a class="connect-action" data-target="finish-personal">Go to Facebook Authorization &rarr;</a>
+		</div>
+		<div class="connect-view connect-google">
+			<h2 class="connect-title">Add a Google+ Page</h2>
+			<p class="connect-instructions">Make sure you are signed in as a page manager to authorize Sprout. You can then choose specific pages to connect with Sprout.</p>
+			<img class="connect-image" alt="Twitter Auth" src="connect-google.png">
+			<a class="connect-action" data-target="google-pages">Go to Google+ Authorization &rarr;</a>
+		</div>
+		<div class="connect-view connect-linkedin">
+			<h2 class="connect-title">Add Your Personal LinkedIn Profile</h2>
+			<p class="connect-instructions">Grant acces to your profile to share updates and view your feed.</p>
+			<img class="connect-image" alt="Twitter Auth" src="connect-linkedin.png">
+			<a class="connect-action" data-target="finish-linkedin">Go to LinkedIn Authorization &rarr;</a>
+		</div>
+		<div class="connect-view connect-analytics">
+			<h2 class="connect-title">Add Google Analytics</h2>
+			<p class="connect-instructions">Connect your Google Analytics account to see how your website traffic correlates with your social media activity.</p>
+			<img class="connect-image" alt="Twitter Auth" src="connect-analytics.png">
+			<a class="connect-action" data-target="finish-analytics">Go to Google Authorization &rarr;</a>
+		</div>
+		<div class="connect-view connect-feedly">
+			<h2 class="connect-title">Add Your Feedly Account</h2>
+			<p class="connect-instructions">Connect your Feedly account to view and share articles directly from Sprout. Each Sprout user can connect their Feedly account and view it across all groups. Your feed is not shared and is only viewable by you.</p>
+			<img class="connect-image" alt="Twitter Auth" src="connect-feedly.png">
+			<a class="connect-action" data-target="finish-feedly">Go to Feedly Authorization &rarr;</a>
+		</div>
+		<div class="modal-footer">
+			<p class="modal-message connect-message-1">You can add up to 96 new profiles</p>
+			<!-- <p class="modal-message connect-message-2">Adding this profile does not count towards your limit.</p> -->
+			<div class="modal-actions">
+				<a class="modal-dismiss js-dismiss">Cancel</a>
+				<!-- <a class="modal-submit js-submit">Proceed</a> -->
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal">
+	<div class="tallboy finish">
+		<div class="modal-header">
+			<h1 class="modal-title">Finish Connecting Profile</h1>
+		</div>
+		<div class="finish-view finish-single">
+			<div class="finish-profile">
+				<img class="profile-avatar" src="https://pbs.twimg.com/profile_images/378800000149656937/3a06928e0b3c0f9671c71559e4f8d5a9_bigger.png">
+				<b class="profile-name">Sprout Social</b>
+				<i clsas="twitter-icon"></i>
+				<span class="profile-handle">@SproutSocial</span>
+			</div>
+			<h2 class="finish-title">Profile Successfully Connected</h2>
+			<p class="finish-subtitle">Choose which of your team members can manage this profile.</p>
+		</div><!-- 
+		<div class="finish-view finish-pages">
+			<img class="finish-avatar" alt="Sprout Social" src="https://pbs.twimg.com/profile_images/1498899040/Sprout_TwitterAvatar.png">
+			<h2 class="finish-title">Sprout Social is now connected to Sprout Social Team</h2>
+			<p class="finish-subtitle">Choose which of your team members can manage this profile.</p>
+		</div> -->
+		<div class="modal-body compact-profiles">
+			<table>
+				<tr class="profiles-tr">
+					<th class="profiles-th">Profile Access</th>
+					<th class="profiles-th">
+						<span class="profiles-bulk js-bulk">No Access</span>
+					</th>
+					<th class="profiles-th">
+						<span class="profiles-bulk js-bulk">Read Only</span>
+					</th>
+					<th class="profiles-th">
+						<span class="profiles-bulk js-bulk">Draft</span>
+					</th>
+					<th class="profiles-th">
+						<span class="profiles-bulk js-bulk">Publish</span>
+					</th>
+				</tr>
+				<tr class="profiles-tr">
+					<td class="profiles-td">
+						<img class="profile-avatar" src="https://pbs.twimg.com/profile_images/378800000726222611/fd625a446042449affb13fbce5a96b19_bigger.png">
+						<p class="profile-name">Aaron Rankin</p>
+					</td>
+					<td class="profiles-td"><input class="no-access" type="radio" name="profile-finish-1" value="0" disabled></td>
+					<td class="profiles-td"><input type="radio" name="profile-finish-1" value="0" disabled></td>
+					<td class="profiles-td"><input type="radio" name="profile-finish-1" value="0" disabled></td>
+					<td class="profiles-td"><input type="radio" name="profile-finish-1" value="0" checked></td>
+				</tr>
+				<tr class="profiles-tr">
+					<td class="profiles-td">
+						<img class="profile-avatar" src="https://pbs.twimg.com/profile_images/378800000073697194/290e82a5e12582fcd6b7b971392b9542.jpeg">
+						<p class="profile-name">Arlo Guthrie</p>
+					</td>
+					<td class="profiles-td"><input class="no-access" type="radio" name="profile-finish-8" value="0" checked></td>
+					<td class="profiles-td"><input type="radio" name="profile-finish-8" value="0"></td>
+					<td class="profiles-td"><input type="radio" name="profile-finish-8" value="0"></td>
+					<td class="profiles-td"><input type="radio" name="profile-finish-8" value="0"></td>
+				</tr>
+				<tr class="profiles-tr">
+					<td class="profiles-td">
+						<img class="profile-avatar" src="https://pbs.twimg.com/profile_images/378800000135463536/f6d6973bc802d4abf36ccb93de54472f_bigger.jpeg">
+						<p class="profile-name">Gil Lara</p>
+					</td>
+					<td class="profiles-td"><input class="no-access" type="radio" name="profile-finish-2" value="0" checked></td>
+					<td class="profiles-td"><input type="radio" name="profile-finish-2" value="0"></td>
+					<td class="profiles-td"><input type="radio" name="profile-finish-2" value="0"></td>
+					<td class="profiles-td"><input type="radio" name="profile-finish-2" value="0"></td>
+				</tr>
+				<tr class="profiles-tr">
+					<td class="profiles-td">
+						<img class="profile-avatar" src="https://pbs.twimg.com/profile_images/2162228003/305666_3295009207545_1037274261_33027985_863375369_n.jpg">
+						<p class="profile-name">Josh Galecki</p>
+					</td>
+					<td class="profiles-td"><input class="no-access" type="radio" name="profile-finish-5" value="0" checked></td>
+					<td class="profiles-td"><input type="radio" name="profile-finish-5" value="0"></td>
+					<td class="profiles-td"><input type="radio" name="profile-finish-5" value="0"></td>
+					<td class="profiles-td"><input type="radio" name="profile-finish-5" value="0"></td>
+				</tr>
+				<tr class="profiles-tr">
+					<td class="profiles-td">
+						<img class="profile-avatar" src="https://pbs.twimg.com/profile_images/2902628442/4eea31bf04dceb79c56abb0d12795f5f.jpeg">
+						<p class="profile-name">Laura Lozano</p>
+					</td>
+					<td class="profiles-td"><input class="no-access" type="radio" name="profile-finish-7" value="0" checked></td>
+					<td class="profiles-td"><input type="radio" name="profile-finish-7" value="0"></td>
+					<td class="profiles-td"><input type="radio" name="profile-finish-7" value="0"></td>
+					<td class="profiles-td"><input type="radio" name="profile-finish-7" value="0"></td>
+				</tr>
+				<tr class="profiles-tr">
+					<td class="profiles-td">
+						<img class="profile-avatar" src="https://pbs.twimg.com/profile_images/3349796518/2146c2ee79ba96da931d873ee3f5f9ad_bigger.jpeg">
+						<p class="profile-name">Matt Born</p>
+					</td>
+					<td class="profiles-td"><input class="no-access" type="radio" name="profile-finish-3" value="0" checked></td>
+					<td class="profiles-td"><input type="radio" name="profile-finish-3" value="0"></td>
+					<td class="profiles-td"><input type="radio" name="profile-finish-3" value="0"></td>
+					<td class="profiles-td"><input type="radio" name="profile-finish-3" value="0"></td>
+				</tr>
+				<tr class="profiles-tr">
+					<td class="profiles-td">
+						<img class="profile-avatar" src="https://pbs.twimg.com/profile_images/1285515109/profile_bigger.png">
+						<p class="profile-name">Peter Soung</p>
+					</td>
+					<td class="profiles-td"><input class="no-access" type="radio" name="profile-finish-4" value="0" checked></td>
+					<td class="profiles-td"><input type="radio" name="profile-finish-4" value="0"></td>
+					<td class="profiles-td"><input type="radio" name="profile-finish-4" value="0"></td>
+					<td class="profiles-td"><input type="radio" name="profile-finish-4" value="0"></td>
+				</tr>
+				<tr class="profiles-tr">
+					<td class="profiles-td">
+						<img class="profile-avatar" src="https://pbs.twimg.com/profile_images/1884302142/Turntable2_bigger">
+						<p class="profile-name">Ryan Evans</p>
+					</td>
+					<td class="profiles-td"><input class="no-access" type="radio" name="profile-finish-6" value="0" checked></td>
+					<td class="profiles-td"><input type="radio" name="profile-finish-6" value="0"></td>
+					<td class="profiles-td"><input type="radio" name="profile-finish-6" value="0"></td>
+					<td class="profiles-td"><input type="radio" name="profile-finish-6" value="0"></td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="modal-footer">
+			<p class="modal-message finish-message-1">You can add up to 96 new profiles</p>
+			<!-- <p class="modal-message finish-message-2">Adding this profile does not count towards your limit.</p> -->
+			<div class="modal-actions">
+				<a class="modal-dismiss js-reset">reset</a>
+				<a class="modal-submit js-submit">Save</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal">
+	<div class="invite">
+		<div class="modal-header">
+			<h1 class="modal-title">Invite User</h1>
+		</div>
+		<div class="modal-body">
+			<div class="invite-list"></div>
+			<p class="error invite-form-error">An error occurred. Sorry this wasn't more helpful.</p>
+			<div class="invite-form">
+				<input class="invite-first" placeholder="First Name">
+				<input class="invite-last" placeholder="Last Name">
+				<input class="invite-email" placeholder="Email Address">
+				<i class="add-icon js-add"></i>
+			</div>
+			<div class="invite-access">
+				<i class="invite-access-icon"></i>
+				<div class="invite-pair">
+					<input type="checkbox" class="invite-checkbox" id="basic-checkbox" checked>
+					<label for="basic-checkbox">Basic Reporting</label>
+				</div>
+				<div class="invite-pair">
+					<input type="checkbox" class="invite-checkbox" id="engagement-checkbox" checked>
+					<label for="engagement-checkbox">Engagement Report</label>
+				</div>
+				<div class="invite-pair">
+					<input type="checkbox" class="invite-checkbox" id="team-checkbox">
+					<label for="team-checkbox">Team Report</label>
+				</div>
+			</div>
+			<div class="invite-manage">
+				<i class="invite-manage-icon"></i>
+				<div class="invite-pair">
+					<input type="checkbox" class="invite-checkbox" id="profiles-checkbox">
+					<label for="profiles-checkbox">Manage profiles &amp; permissions</label>
+				</div>
+				<div class="invite-pair">
+					<input type="checkbox" class="invite-checkbox" id="users-checkbox">
+					<label for="users-checkbox">Invite other users</label>
+				</div>
+				<div class="invite-pair">
+					<input type="checkbox" class="invite-checkbox" id="super-checkbox">
+					<label for="super-checkbox">Super admin</label>
+				</div>
+			</div>
+		</div>
+		<div class="modal-body invite-groups">
+			<h2 class="modal-title">Choose Groups</h2>
+			<a class="invite-group selected">Sprout Social Team</a>
+			<a class="invite-group">Sprout Social AU</a>
+			<a class="invite-group">Sprout Social EURO</a>
+			<a class="invite-group">Sprout Social UK</a>
+			<a class="invite-group">Sprout Social JP</a>
+		</div>
+		<div class="modal-body invite-profiles">
+			<table>
+				<tr class="profiles-tr">
+					<th class="profiles-th">Profile Access</th>
+					<th class="profiles-th">
+						<span class="profiles-bulk">No Access</span>
+					</th>
+					<th class="profiles-th">
+						<span class="profiles-bulk">Read Only</span>
+					</th>
+					<th class="profiles-th">
+						<span class="profiles-bulk">Draft</span>
+					</th>
+					<th class="profiles-th">
+						<span class="profiles-bulk">Publish</span>
+					</th>
+				</tr>
+				<tr class="profiles-tr">
+					<td class="profiles-td">
+						<img class="profile-avatar" src="https://pbs.twimg.com/profile_images/1498899040/Sprout_TwitterAvatar.png">
+						<p class="profile-name">Sprout Social</p>
+						<p class="profile-handle"><i class="twitter-icon"></i>@SproutSocial</p>
+					</td>
+					<td class="profiles-td"><input class="no-access" type="radio" name="profile-1" value="0"></td>
+					<td class="profiles-td"><input type="radio" name="profile-1" value="0"></td>
+					<td class="profiles-td"><input type="radio" name="profile-1" value="0"></td>
+					<td class="profiles-td"><input type="radio" name="profile-1" value="0" checked></td>
+				</tr>
+				<tr class="profiles-tr">
+					<td class="profiles-td">
+						<img class="profile-avatar" src="https://pbs.twimg.com/profile_images/378800000149661076/c5b443a67d3a75b8b57edbd2e13fa399_bigger.png">
+						<p class="profile-name">Sprout Insights</p>
+						<p class="profile-handle"><i class="twitter-icon"></i>@Sprout_Insights</p>
+					</td>
+					<td class="profiles-td"><input class="no-access" type="radio" name="profile-2" value="0" checked></td>
+					<td class="profiles-td"><input type="radio" name="profile-2" value="0"></td>
+					<td class="profiles-td"><input type="radio" name="profile-2" value="0"></td>
+					<td class="profiles-td"><input type="radio" name="profile-2" value="0"></td>
+				</tr>
+				<tr class="profiles-tr disabled">
+					<td class="profiles-td">
+						<img class="profile-avatar" src="https://pbs.twimg.com/profile_images/1591934500/2010-07-31_23.47.52.png">
+						<p class="profile-name">Justyn Howard</p>
+						<p class="profile-handle"><i class="twitter-icon"></i>@justyn</p>
+					</td>
+					<td class="profiles-td"><input class="no-access" type="radio" name="profile-3" value="0" checked></td>
+					<td class="profiles-td"><input type="radio" name="profile-3" value="0"></td>
+					<td class="profiles-td"><input type="radio" name="profile-3" value="0"></td>
+					<td class="profiles-td"><input type="radio" name="profile-3" value="0"></td>
+				</tr>
+				<tr class="profiles-tr disabled">
+					<td class="profiles-td">
+						<img class="profile-avatar" src="https://pbs.twimg.com/profile_images/1689721176/Caro-Support_bigger.png">
+						<p class="profile-name">Sprout Support</p>
+						<p class="profile-handle"><i class="twitter-icon"></i>@SproutSupport</p>
+					</td>
+					<td class="profiles-td"><input class="no-access" type="radio" name="profile-4" value="0" checked></td>
+					<td class="profiles-td"><input type="radio" name="profile-4" value="0"></td>
+					<td class="profiles-td"><input type="radio" name="profile-4" value="0"></td>
+					<td class="profiles-td"><input type="radio" name="profile-4" value="0"></td>
+				</tr>
+			</table>
+		</div>
+		<div class="modal-footer">
+			<p class="modal-message">Your billing will be adjusted to reflect additional users at $99/mo</p>
+			<div class="modal-actions">
+				<a class="modal-dismiss js-dismiss">Cancel</a>
+				<a class="modal-submit js-send">Send Invite</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal">
+	<div class="migrate">
+		<p class="migrate-lead">On <b>July 30th</b>, we are making some improvements to Sprout, and we need your attention in order for this to go smoothly. Please choose which users can invite others to your Sprout account.</p>
+		<div class="modal-body">
+			<table class="migrate-table">
+				<tr class="migrate-tr">
+					<th class="migrate-th migrate-who">Team Member</th>
+					<th class="migrate-th">May Add &amp;<br> Remove Users</th>
+					<th class="migrate-th">May Add &amp;<br> Remove Profiles</th>
+				</tr>
+				<tr class="migrate-tr">
+					<td class="migrate-td migrate-who">Juan A.</td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+				</tr>
+				<tr class="migrate-tr">
+					<td class="migrate-td migrate-who">Juan B.</td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+				</tr>
+				<tr class="migrate-tr">
+					<td class="migrate-td migrate-who">Juan C.</td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+				</tr>
+				<tr class="migrate-tr">
+					<td class="migrate-td migrate-who">Juan D.</td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+				</tr>
+				<tr class="migrate-tr">
+					<td class="migrate-td migrate-who">Juan E.</td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+				</tr>
+				<tr class="migrate-tr">
+					<td class="migrate-td migrate-who">Juan F.</td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+				</tr>
+				<tr class="migrate-tr">
+					<td class="migrate-td migrate-who">Juan G.</td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+				</tr>
+				<tr class="migrate-tr">
+					<td class="migrate-td migrate-who">Juan H.</td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+				</tr>
+				<tr class="migrate-tr">
+					<td class="migrate-td migrate-who">Juan I.</td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+				</tr>
+				<tr class="migrate-tr">
+					<td class="migrate-td migrate-who">Juan J.</td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+				</tr>
+				<tr class="migrate-tr">
+					<td class="migrate-td migrate-who">Juan K.</td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+				</tr>
+				<tr class="migrate-tr">
+					<td class="migrate-td migrate-who">Juan L.</td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+				</tr>
+				<tr class="migrate-tr">
+					<td class="migrate-td migrate-who">Juan M.</td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+				</tr>
+				<tr class="migrate-tr">
+					<td class="migrate-td migrate-who">Juan N.</td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+				</tr>
+				<tr class="migrate-tr">
+					<td class="migrate-td migrate-who">Juan O.</td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+				</tr>
+				<tr class="migrate-tr">
+					<td class="migrate-td migrate-who">Juan P.</td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+				</tr>
+				<tr class="migrate-tr">
+					<td class="migrate-td migrate-who">Juan Q.</td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+				</tr>
+				<tr class="migrate-tr">
+					<td class="migrate-td migrate-who">Juan R.</td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+				</tr>
+				<tr class="migrate-tr">
+					<td class="migrate-td migrate-who">Juan S.</td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+				</tr>
+				<tr class="migrate-tr">
+					<td class="migrate-td migrate-who">Juan T.</td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+				</tr>
+				<tr class="migrate-tr">
+					<td class="migrate-td migrate-who">Juan U.</td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+				</tr>
+				<tr class="migrate-tr">
+					<td class="migrate-td migrate-who">Juan V.</td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+				</tr>
+				<tr class="migrate-tr">
+					<td class="migrate-td migrate-who">Juan W.</td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+				</tr>
+				<tr class="migrate-tr">
+					<td class="migrate-td migrate-who">Juan X.</td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+				</tr>
+				<tr class="migrate-tr">
+					<td class="migrate-td migrate-who">Juan Y.</td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+				</tr>
+				<tr class="migrate-tr">
+					<td class="migrate-td migrate-who">Juan Z.</td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+					<td class="migrate-td"><input type="checkbox" class="migrate-checkbox"></td>
+				</tr>
+			</table>
+		</div>
+		<div class="migrate-actions">
+			<a class="migrate-dismiss js-dismiss">Remind me later</a>
+			<a class="migrate-done js-done">Done</a>
+		</div>
+	</div>
+</div>
+	<div class="demo">
+		<a class="js-connect">Connect</a>
+		<a class="js-invite">Invite</a>
+		<a class="js-migrate">Migrate</a>
+	</div>
+	<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="permissions.js"></script>
+</body>
+</html>

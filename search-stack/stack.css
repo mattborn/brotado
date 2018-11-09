@@ -1,0 +1,52 @@
+@import '../shared.css';
+
+.content { padding: 120px 0 30px; }
+
+.normal-content-stub,
+.stack-content-stub {
+	height: 500px;
+	border: 5px dashed #ddd;
+	color: #bbb;
+	font-size: 300%;
+	line-height: 500px;
+	text-align: center;
+}
+
+.stack {
+	width: 100%; height: 100%;
+	background: #eee;
+	display: none;
+	padding: 160px 0 30px;
+	position: fixed;
+	top: 0; left: 0;
+}
+.stack-header {
+	width: 100%;
+	color: #fff;
+	display: none;
+	position: fixed;
+	top: 90px; left: 0;
+}
+.stack-title {
+	display: none;
+	font-weight: bold;
+	letter-spacing: 2px;
+	line-height: 40px;
+	padding-left: 20px;
+	text-transform: uppercase;
+}
+.stack-esc {
+	letter-spacing: 2px;
+	line-height: 40px;
+	position: absolute;
+	top: 0; right: 60px;
+	text-transform: uppercase;
+}
+.stack-esc .esc {
+	background: rgba(0,0,0,.1);
+	border-radius: 3px;
+	padding: 5px 8px 5px 10px;
+}
+.stack-twitter { background: #0ae; }
+.stack-google { background: #d43; }
+.stack-facebook { background: #359; }

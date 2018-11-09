@@ -1,0 +1,47 @@
+<div id="main">
+  <div id="tasks">
+    <header id="tasks-header" class="group">
+      <div class="pill-drop">
+        <a class="current" href="/tasks">My Tasks</a>
+        <div class="menu">
+          <a href="/tasks/assigned">Assigned By Me</a>
+        </div><!-- .menu -->
+      </div><!-- .pill-drop -->
+      <div class="pill-tabs">
+        <a class="all active" href="/tasks">All Tasks</a>
+        <a class="general" href="/tasks/general">General</a>
+        <a class="leads" href="/tasks/leads">Sales Leads</a>
+        <a class="support" href="/tasks/support">Support Issues</a>
+      </div><!-- .pill-tabs -->
+    </header>
+    <table class="tasks-table">
+      <tr>
+        <th>My Tasks</th>
+        <th>Last Activity</th>
+        <th>Type</th>
+        <th>Comments</th>
+        <th>Action</th>
+      </tr>
+{{#tasks}}
+      <tr class="task-item">
+        <td class="task-item-{{status}}">
+          {{#priority}}<a class="task-item-priority" href="#"></a>{{/priority}}
+          <img class="task-item-avatar" alt="{{name}}" src="//pbs.twimg.com/profile_images/{{avatar}}">
+          <p class="task-item-message"><b>{{name}}</b> {{tweet}}</p>
+          <p class="task-item-assigned subtle">Tweet assigned to <b>{{who}}</b> • {{when}}</p>
+        </td>
+        <td>
+          <p class="task-item-last">{{last}} {{someone}}</p>
+          <p class="subtle">{{date}}</p>
+        </td>
+        <td class="task-item-type"><a class="task-item-{{type}}" href="#"></a></td>
+        <td class="task-item-comments">{{comments}}</td>
+        <td>
+          <input type="checkbox" class="checkbox" id="checkbox-{{id}}">
+          <label class="fatty" for="checkbox-{{id}}"><span></span></label>
+        </td>
+      </tr>
+{{/tasks}}
+    </table>
+  </div><!-- #tasks -->
+</div><!-- #main -->

@@ -1,0 +1,88 @@
+@import '../shared.css';
+
+.content { padding: 120px 0 30px; }
+
+.facebook-convo { /* make:mixin */
+	width: 440px; height: 100%;
+	box-sizing: border-box;
+	padding: 170px 0 30px;
+	position: fixed;
+	top: 0;
+}
+.facebook-convo .side-shadow { top: -50px; bottom: 0; }
+.facebook-convo-header {
+	width: 100%; height: 50px;
+	background: #eee;
+	box-sizing: border-box;
+	padding: 15px 20px;
+	position: absolute;
+	top: 120px;
+}
+.facebook-convo-original {
+	background: #eee;
+	border-bottom: 1px solid #ddd;
+	padding: 0 20px 20px 20px;
+}
+.profile-who { padding: 5px 0 23px 70px; position: relative; }
+.profile-avatar {
+	width: 50px; height: 50px;
+	position: absolute;
+	top: 0; left: 0;
+}
+.profile-name { display: block; font-size: 18px; margin-bottom: 10px; }
+.profile-when { color: #777; }
+.facebook-convo-original-message {
+	font-size: 16px;
+	line-height: 20px;
+	margin-bottom: 30px;
+}
+.facebook-convo-original-message p { margin-bottom: 20px; }
+.facebook-comment-text {
+	width: 100%;
+	background: #fff;
+	border: 0;
+	box-shadow: inset 0 2px #359;
+	box-sizing: border-box;
+	color: inherit;
+	font: inherit;
+	font-size: 16px;
+	line-height: 20px;
+	margin-bottom: 20px;
+	padding: 20px;
+	resize: none;
+	-webkit-font-smoothing: antialiased;
+}
+.facebook-convo-actions { font-size: 12px; line-height: 30px; }
+.facebook-convo-actions:after { clear: both; content: ''; display: table; }
+.facebook-comment-button {
+	width: 100px;
+	background: #359;
+	border-radius: 5px;
+	color: #fff;
+	float: right;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	line-height: 30px;
+	padding: 0 20px;
+	text-align: center;
+	text-transform: uppercase;
+}
+.facebook-comment-button:hover { background: #4866a3; }
+
+/*  Copied from Twitter Convo  */
+
+.side-message {
+	border-bottom: 2px solid #eee;
+	margin: 0 20px;
+	padding: 20px 0 20px 70px;
+	position: relative;
+}
+.side-message-avatar {
+	width: 50px; height: 50px;
+	position: absolute;
+	top: 20px; left: 0;
+}
+.side-message-text { font-size: 16px; line-height: 20px; margin-bottom: 10px; }
+.side-message-name { color: #16a; margin-right: 5px; }
+.side-message-when { color: #bbb; }
